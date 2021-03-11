@@ -19,8 +19,20 @@
             </template>
             <el-menu-item-group>
               <template slot="title">选择题</template>
-              <el-menu-item index="/admin/choiceQuestion/create">选择题录入</el-menu-item>
-              <el-menu-item index="/admin/choiceQuestion/list">选择题列表</el-menu-item>
+              <el-menu-item index="/admin/choiceQuestion/create">单选题录入</el-menu-item>
+              <el-menu-item index="/admin/choiceQuestion/list">单选题列表</el-menu-item>
+              <el-menu-item index="/admin/multipleChoiceQuestion/create">多选题录入</el-menu-item>
+              <el-menu-item index="/admin/multipleChoiceQuestion/list">多选题列表</el-menu-item>
+            </el-menu-item-group>
+            <el-menu-item-group>
+              <template slot="title">判断题</template>
+              <el-menu-item index="/admin/judgedQuestion/create">判断题录入</el-menu-item>
+              <el-menu-item index="/admin/judgedQuestion/list">判断题列表</el-menu-item>
+            </el-menu-item-group>
+            <el-menu-item-group>
+              <template slot="title">论述题</template>
+              <el-menu-item index="/admin/discussQuestion/create">论述题录入</el-menu-item>
+              <el-menu-item index="/admin/discussQuestion/list">论述题列表</el-menu-item>
             </el-menu-item-group>
           </el-submenu>
           <el-submenu index="3">

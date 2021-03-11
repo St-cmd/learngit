@@ -1,6 +1,6 @@
 <template>
-  <div class="choiceQuestion">
-    <h1>单选题列表</h1>
+  <div class="multipleChoiceQuestion">
+    <h1>多选题列表</h1>
     <!-- {{ items.length }} -->
     <el-table :data="items.slice((currentPage - 1) * pagesize, currentPage * pagesize)">
       <el-table-column prop="_id" label="ID" width="240"></el-table-column>
@@ -11,7 +11,7 @@
           <el-button
             type="text"
             size="small"
-            @click="$router.push(`/admin/choiceQuestion/edit/${scope.row._id}`)"
+            @click="$router.push(`/admin/multipleChoiceQuestion/edit/${scope.row._id}`)"
           >编辑</el-button>
           <el-button type="text" size="small" @click="remove(scope.row)">删除</el-button>
         </template>
@@ -46,7 +46,7 @@ export default {
   },
   methods: {
     async fetch () {
-      const res = await this.$http.get('/choiceQuestion')
+      const res = await this.$http.get('/multipleChoiceQuestion')
       console.log(res)
       this.items = res.data
       //   console.log(this.items.)
@@ -58,7 +58,7 @@ export default {
         type: 'warning'
       }).then(async () => {
         // 请求删除的接口
-        const res = await this.$http.delete(`choiceQuestion/${row._id}`)
+        const res = await this.$http.delete(`multipleChoiceQuestion/${row._id}`)
         console.log(res)
         this.$message({
           type: 'success',

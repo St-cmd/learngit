@@ -64,7 +64,7 @@ export default {
     return {
       question: {
         category: {
-          categortId: '',
+          categoryId: '',
           categoryName: ''
         }
       },

@@ -7,6 +7,15 @@ import CategoryList from '@/views/Category/List.vue'
 import ChoiceQuestionCreate from '@/views/ChoiceQuestion/Create.vue'
 import ChoiceQuestionList from '@/views/ChoiceQuestion/List.vue'
 
+import MultipleChoiceQuestionCreate from '@/views/MultipleChoiceQuestion/Create.vue'
+import MultipleChoiceQuestionList from '@/views/MultipleChoiceQuestion/List.vue'
+
+import JudgedQuestionCreate from '@/views/JudgedQuestion/Create.vue'
+import JudgedQuestionList from '@/views/JudgedQuestion/List.vue'
+
+import DiscussQuestionCreate from '@/views/DiscussQuestion/Create.vue'
+import DiscussQuestionList from '@/views/DiscussQuestion/List.vue'
+
 import FileCreate from '@/views/FilePage/Create.vue'
 import FileList from '@/views/FilePage/List.vue'
 
@@ -44,6 +53,18 @@ const routes = [
       { path: 'choiceQuestion/create', component: ChoiceQuestionCreate },
       { path: 'choiceQuestion/edit/:id', component: ChoiceQuestionCreate, props: true },
       { path: 'choiceQuestion/list', component: ChoiceQuestionList },
+
+      { path: 'multipleChoiceQuestion/create', component: MultipleChoiceQuestionCreate },
+      { path: 'multipleChoiceQuestion/edit/:id', component: MultipleChoiceQuestionCreate, props: true },
+      { path: 'multipleChoiceQuestion/list', component: MultipleChoiceQuestionList },
+
+      { path: 'judgedQuestion/create', component: JudgedQuestionCreate },
+      { path: 'judgedQuestion/edit/:id', component: JudgedQuestionCreate, props: true },
+      { path: 'judgedQuestion/list', component: JudgedQuestionList },
+
+      { path: 'discussQuestion/create', component: DiscussQuestionCreate },
+      { path: 'discussQuestion/edit/:id', component: DiscussQuestionCreate, props: true },
+      { path: 'discussQuestion/list', component: DiscussQuestionList },
 
       { path: 'filePage/create', component: FileCreate },
       { path: 'filePage/list', component: FileList },

@@ -1,23 +1,17 @@
 <template>
   <div class="ChoiceQuestion">
-    <h1>录入单选题</h1>
+    <h1>录入判断题</h1>
     <el-form label-width="120px" @submit.native.prevent="save">
       <el-form-item label="录入题目">
         <el-input v-model="question.title"></el-input>
       </el-form-item>
-      <el-form-item label="录入答案选项">
+      <el-form-item label="答案选项">
         <el-radio-group v-model="question.rightAnswer">
           <div class="answers">
-            <el-radio label="A"><el-input placeholder="请输入选项A内容" v-model="question.answerA"></el-input></el-radio>
+            <el-radio label="A">对</el-radio>
           </div>
           <div class="answers">
-            <el-radio label="B"><el-input placeholder="请输入选项B内容" v-model="question.answerB"></el-input></el-radio>
-          </div>
-          <div class="answers">
-            <el-radio label="C"><el-input placeholder="请输入选项C内容" v-model="question.answerC"></el-input></el-radio>
-          </div>
-          <div class="answers">
-            <el-radio label="D"><el-input placeholder="请输入选项D内容" v-model="question.answerD"></el-input></el-radio>
+            <el-radio label="B">错</el-radio>
           </div>
         </el-radio-group>
       </el-form-item>
@@ -88,13 +82,13 @@ export default {
       let res
       // 将题目保存到数据库
       if (this.id) {
-        res = await this.$http.put(`/choiceQuestion/${this.id}`, this.question)
+        res = await this.$http.put(`/judgedQuestion/${this.id}`, this.question)
       } else {
-        res = await this.$http.post('/choiceQuestion', this.question)
+        res = await this.$http.post('/judgedQuestion', this.question)
       }
       console.log(res)
       // 创建完成后跳转到分类列表
-      this.$router.push('/admin/choiceQuestion/list')
+      this.$router.push('/admin/judgedQuestion/list')
         .catch(error => { console.log(error) })
       this.$message({
         type: 'success',
@@ -103,7 +97,7 @@ export default {
     },
     // 获取修改数据
     async fetch () {
-      const res = await this.$http.get(`/choiceQuestion/${this.id}`)
+      const res = await this.$http.get(`/judgedQuestion/${this.id}`)
       console.log(res)
       this.question = res.data.question
       console.log(this.question)
@@ -121,7 +115,7 @@ export default {
       })
     }
     // async fetch () {
-    //   const res = await this.$http.get(`choiceQuestion/${this.id}`)
+    //   const res = await this.$http.get(`judgedQuestion/${this.id}`)
     //   this.question = res.data
     // }
   }

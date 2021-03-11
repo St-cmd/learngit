@@ -1,25 +1,25 @@
 <template>
   <div class="ChoiceQuestion">
-    <h1>录入单选题</h1>
+    <h1>录入多择题</h1>
     <el-form label-width="120px" @submit.native.prevent="save">
       <el-form-item label="录入题目">
         <el-input v-model="question.title"></el-input>
       </el-form-item>
       <el-form-item label="录入答案选项">
-        <el-radio-group v-model="question.rightAnswer">
+        <el-checkbox-group v-model="question.rightAnswer" @change="handleCheckedAnswerChange">
           <div class="answers">
-            <el-radio label="A"><el-input placeholder="请输入选项A内容" v-model="question.answerA"></el-input></el-radio>
+            <el-checkbox label="A"><el-input placeholder="请输入选项A内容" v-model="question.answerA"></el-input></el-checkbox>
           </div>
           <div class="answers">
-            <el-radio label="B"><el-input placeholder="请输入选项B内容" v-model="question.answerB"></el-input></el-radio>
+            <el-checkbox label="B"><el-input placeholder="请输入选项B内容" v-model="question.answerB"></el-input></el-checkbox>
           </div>
           <div class="answers">
-            <el-radio label="C"><el-input placeholder="请输入选项C内容" v-model="question.answerC"></el-input></el-radio>
+            <el-checkbox label="C"><el-input placeholder="请输入选项C内容" v-model="question.answerC"></el-input></el-checkbox>
           </div>
           <div class="answers">
-            <el-radio label="D"><el-input placeholder="请输入选项D内容" v-model="question.answerD"></el-input></el-radio>
+            <el-checkbox label="D"><el-input placeholder="请输入选项D内容" v-model="question.answerD"></el-input></el-checkbox>
           </div>
-        </el-radio-group>
+        </el-checkbox-group>
       </el-form-item>
       <div class="category">
         <el-form-item label="所属分类">
@@ -52,6 +52,7 @@ export default {
   data () {
     return {
       question: {
+        rightAnswer: [],
         category: {
           categoryId: '',
           categoryName: ''
@@ -88,13 +89,13 @@ export default {
       let res
       // 将题目保存到数据库
       if (this.id) {
-        res = await this.$http.put(`/choiceQuestion/${this.id}`, this.question)
+        res = await this.$http.put(`/multipleChoiceQuestion/${this.id}`, this.question)
       } else {
-        res = await this.$http.post('/choiceQuestion', this.question)
+        res = await this.$http.post('/multipleChoiceQuestion', this.question)
       }
       console.log(res)
       // 创建完成后跳转到分类列表
-      this.$router.push('/admin/choiceQuestion/list')
+      this.$router.push('/admin/multipleChoiceQuestion/list')
         .catch(error => { console.log(error) })
       this.$message({
         type: 'success',
@@ -103,7 +104,7 @@ export default {
     },
     // 获取修改数据
     async fetch () {
-      const res = await this.$http.get(`/choiceQuestion/${this.id}`)
+      const res = await this.$http.get(`/multipleChoiceQuestion/${this.id}`)
       console.log(res)
       this.question = res.data.question
       console.log(this.question)
@@ -119,9 +120,12 @@ export default {
           return false
         }
       })
+    },
+    async handleCheckedAnswerChange (value) {
+      this.question.rightAnswer = value
     }
     // async fetch () {
-    //   const res = await this.$http.get(`choiceQuestion/${this.id}`)
+    //   const res = await this.$http.get(`multipleChoiceQuestion/${this.id}`)
     //   this.question = res.data
     // }
   }
