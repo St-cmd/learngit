@@ -1,0 +1,132 @@
+@import "reset.css";
+html,body{
+    height: 100%;
+}
+body{
+    background-color: #fff;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+header{
+    padding-top: 20px;
+    h2{
+        height: 26px;
+        font-size: 18px;
+        font-weight: bold;
+        border-bottom: 1px solid #cacaca;
+    }
+    .top{
+        
+        border-bottom: 1px solid  #cacaca;
+        margin-bottom: 40px;
+        .list{
+            padding: 14px 0;
+            float: left;
+            .fir{
+                border-right: none;
+            }
+            li{
+                float: left;
+                width: 64px;
+                height: 34px;
+                background: #f4f4f4;
+                border: 1px solid #cdcdcd;
+                text-align: center;
+                line-height: 34px;
+                color: #3a3a3a;
+                font-size: 10px;
+            }
+        }
+        .fun{
+            float: right;
+            padding: 14px 0;
+            span{
+                font-size: 16px;
+                color: #000;
+            }
+            input{
+                width: 173px;
+                height: 28px;
+                border: 1px solid #e4e4e4;
+                margin-right: 5px;
+            }
+            a{
+                display: inline-block;
+                width: 48px;
+                height: 26px;
+                border: 1px solid #cdcdcd;
+                background-color: #f1f1f1;
+                color: #020202;
+                font-size: 12px;
+                text-align: center;
+                line-height: 28px;
+            }
+        }
+    }
+    .box{
+        overflow-x: auto;
+        table{
+            min-width: 1200px;
+            width: 100%;         
+            border-collapse: collapse;
+            margin: auto;
+           tr{
+                height: 45px;
+                border: 1px solid #cacaca;
+                td{
+                    width: 11%;
+                    padding-left: 20px;
+                    border: 1px solid #cacaca;
+                    box-sizing: border-box;
+                    &:nth-child(1){
+                        padding-left: 0;
+                        width: 6%;
+                        text-align: center;
+                    }
+                    a{
+                        display: inline-block;
+                        width: 44px;
+                        height: 24px;
+                        font-size: 14px;
+                        line-height: 24px;
+                        text-align: center;
+                        color: #3a3a3a;
+                        background: #dfdfdf;
+                    }
+                }
+                th{
+                    width: 11%;
+                    font-size: 16px;
+                    color: #020202;
+                    border: 1px solid #cacaca;
+                    &:nth-child(1){
+                        width: 6%;
+                    }
+                }
+           }
+        }
+    }
+}
+@media screen and(max-width:992px){
+    header .top .list{
+        float: none;
+    }
+    header .top .fun{
+        float: none;
+    }
+    header .top{
+        padding: 0 26px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+    header .top .list{
+        border: none;
+        width: 100%;          
+        li{
+            border: none;
+            width: 15%;
+            margin: 0 5%;
+        }
+    }
+}

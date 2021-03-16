@@ -1,0 +1,25 @@
+/* 首页,详情,列表页版心 */
+.area{
+    width: 1190px;
+    margin: 0 auto;
+}
+.clearfix{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* 登录页版心 */
+.login_area{
+    width: 1199px;
+    margin: 0 auto;
+}
+.register_area{
+    width: 1200px;
+    margin: 0 auto;
+}
+/* 购物车版心 */
+.shop_area{
+    width: 1200px;
+    margin: 0 auto;
+}

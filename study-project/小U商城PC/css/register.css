@@ -1,0 +1,149 @@
+/* 导航 */
+#nav{
+    height: 108px;
+    background: #fff;
+}
+#nav img{
+    float: left;
+    margin: 29px 26px 0 0;
+}
+#nav i{
+    float: left;
+    display: inline-block;
+    width: 1px;
+    height: 50px;
+    background-color: #e8e8e8;
+    margin: 35px 20px 0 0;
+}
+#nav span{
+    float: left;
+    display: inline-block;
+    margin-top: 45px ;
+    font-size: 24px;
+    color: #6a6a6a;
+}
+/* 内容 */
+#con{
+    height: 552px;
+    overflow: hidden;
+}
+#con .con_box{
+    width: 382px;
+    height: 480px;
+    background-color: #fff;
+    margin: 33px 0 0 230px;
+    border-top: 3px solid #f36e11;
+    padding: 0 186px 0;
+}
+#con .con_box h3{
+    width: 382px;
+    height: 86px;
+    font-size: 22px;
+    line-height: 86px;
+    text-align: center;
+    color: #333333;
+    font-weight: normal;
+
+}
+#con .con_box form .form_write{
+    width: 376px;
+    height: 34px;
+    border: 1px solid #d9d9d9;
+    margin-bottom: 8px;
+}
+#con .con_box form .form_first{
+    border: 1px solid #f56b12;
+}
+#con .con_box form em{
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #ff5f00;
+}
+#con form .form_write span{
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    border-right: 1px solid #d9d9d9;
+    background: #f8f8f8;
+}
+#con form .form_write .first{
+    background: #fef9f6;
+    border-right: 1px solid #f56b12;
+}
+
+#con form .form_write input{
+    border: none;
+    padding-left: 12px;
+}
+#con form .form_write input::placeholder{
+    font-size: 14px;
+    color: #939393;
+}
+#con form .form_num input{
+    width: 206px;
+    height: 34px;
+    border: 1px solid #d9d9d9;
+    padding-left: 9px;
+    box-sizing: border-box;
+    margin-right: 17px;
+    margin-bottom: 10px;
+}
+#con form .form_num input::placeholder{
+    font-size: 14px;
+    color: #939393;
+}
+#con form button{
+    width: 382px;
+    height: 42px;
+    border: 1px solid #f26b11;
+    border-radius: 4px;
+    background: #f26b11;
+    font-size: 20px;
+    line-height: 42px;
+    text-align: center;
+    color: #fff5f8;
+    font-weight: normal;
+    margin: 10px 0 30px 0;
+}
+#con form .form_auto{
+    width: 382px;
+    height: 12px;
+    text-align: center;
+    line-height: 12px;
+}
+#con form .form_auto i{
+    display: inline-block;
+    color: #313131;
+    margin-right: 7px;
+}
+#con form .form_auto a{
+    color: #e46c2d;
+}
+
+
+
+
+
+
+
+
+/* 底部 */
+#footer {
+    height: 119px;
+    background: #fff;
+    text-align: center;
+}
+#footer .login_area span{
+    display: inline-block;
+    margin: 43px 0 14px 0;
+}
+#footer .login_area i{
+    display: inline-block;
+    margin-left: 100px;
+}
+#footer .login_area span,#footer .login_area i{
+    color:#616161;
+    
+}

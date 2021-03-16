@@ -1,0 +1,201 @@
+@import "reset.css";
+html,
+body {
+  height: 100%;
+}
+header {
+  height: 60px;
+  background-color: #fff;
+}
+header .menu {
+  display: none;
+  float: left;
+}
+header .menu > span {
+  line-height: 60px;
+  margin-left: 23px;
+  font-size: 24px;
+  color: #333333;
+}
+header .menu .list {
+  width: 100%;
+  position: fixed;
+  border-top: 1px solid #dddddd;
+  background: #fff;
+  text-align: center;
+  line-height: 40px;
+  padding: 30px 0;
+}
+header .menu .list li:hover {
+  background-color: #009688;
+  color: #ffffff;
+}
+header .menu .list li .iconfont {
+  font-weight: bold;
+}
+header .left {
+  float: left;
+  height: 60px;
+  width: 220px;
+  font-size: 18px;
+  text-align: center;
+  line-height: 60px;
+  background-color: #e9967a;
+  color: #fdffff;
+}
+header .top p {
+  float: right;
+  height: 60px;
+  line-height: 60px;
+  margin-right: 52px;
+  font-size: 18px;
+  color: #424242;
+}
+header .top p img {
+  width: 31px;
+  height: 31px;
+  margin-right: 11px;
+}
+header .top p .iconfont {
+  color: #007acc;
+  font-size: 22px;
+}
+main {
+  height: calc(100% - 60px);
+}
+main .list {
+  height: 100%;
+  float: left;
+  width: 220px;
+  background-color: #fff;
+  padding: 39px 0 83px 60px;
+  box-sizing: border-box;
+}
+main .list li {
+  height: 60px;
+}
+main .list li > span {
+  font-size: 18px;
+  color: #333333;
+}
+main .list li > i {
+  font-size: 22px;
+  font-weight: bold;
+}
+main .list .cur {
+  height: 152px;
+}
+main .list .cur > i {
+  color: #d7e06d;
+}
+main .list .cur > span {
+  color: #d7e06d;
+}
+main .list .cur .second {
+  padding-top: 10px;
+}
+main .list .cur .second p {
+  width: 136px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+}
+main .list .cur .second p:hover {
+  background-color: #e9967a;
+}
+main .list .cur .second p .iconfont {
+  color: #006400;
+  font-weight: bold;
+}
+main .right {
+  padding-left: 220px;
+}
+main .right .top {
+  height: 40px;
+  color: #a0522d;
+  line-height: 40px;
+  padding: 0 20px;
+  border-bottom: 1px solid #bbbbbb;
+}
+main .right .top h2 {
+  float: left;
+}
+main .right .top p {
+  float: right;
+}
+main .right .top p b {
+  display: inline-block;
+  margin-left: 9px;
+  width: 0;
+  border-top: 5px solid #a0522d;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid transparent;
+}
+main .right .mid .box li {
+  float: left;
+  width: 21%;
+  background: #e9967a;
+  color: #fff;
+  border-radius: 5px;
+  margin: 0 2%;
+  margin-top: 15px;
+}
+main .right .mid .box li .infor {
+  width: 100%;
+}
+main .right .mid .box li .infor span {
+  display: block;
+  font-size: 26px;
+  margin-left: 14px;
+  line-height: 45px;
+}
+main .right .mid .box li .infor i {
+  display: block;
+  margin-bottom: 11px;
+  margin-left: 10px;
+}
+main .right .mid .box li em {
+  width: 100%;
+  display: block;
+  height: 32px;
+  background-color: #d1876e;
+  text-align: center;
+  line-height: 32px;
+  font-size: 12px;
+  border-radius: 0 0 5px 5px;
+}
+main .right .mid .box li em img {
+  margin-left: 6px;
+}
+@media screen and (max-width: 992px) {
+  main .right .mid .box li {
+    width: 46%;
+  }
+}
+@media screen and (max-width: 768px) {
+  header .left {
+    display: none;
+  }
+  header .menu {
+    display: block;
+  }
+  header .menu ul {
+    display: none;
+  }
+  header .top .cancel {
+    display: none;
+  }
+  header .top .person {
+    margin-right: 20px;
+  }
+  main .list {
+    display: none;
+  }
+  main .right {
+    padding-left: 0;
+  }
+  main .right .mid .box li {
+    width: 96%;
+  }
+}

@@ -1,0 +1,321 @@
+@import "reset.css";
+@color:#f26b11;
+@co:#fff;
+html,body,.page{
+    height: 100%;
+}
+.page{
+    display: flex;
+    flex-direction: column;
+    max-width: 750px;
+    margin: auto;
+}
+// 头部
+header{
+    height: .9rem;
+    background-color: @color;  
+    padding: 0 .32rem 0 .3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    span{
+        font-size: .34rem;
+        color: #fffdfe;
+    }
+    .iconfont{
+        color: #feffff;
+        font-size: .4rem;
+    }
+    .first{
+        font-size: .55rem;
+    }
+}
+// main
+main{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    .information{
+        height: 1.5rem;
+        padding: 0 .3rem;
+        background-color: @co;  
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: .12rem;
+        p{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            font-size: .24rem;
+            color: #606060;
+            strong{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: .2rem;
+                i{
+                    margin-right: .14rem;
+                }
+            }
+            .add{
+                display: flex;
+                .name_add{
+                    width: 1.26rem;
+                }
+            }
+            
+        }
+        .iconfont{
+            display: inline-block;
+            width: .58rem;
+            line-height: 1.5rem;
+            text-align: right;
+            color: #aaaaaa;
+           
+        }
+    }
+    .shop{
+        padding: 0 .3rem 0 .25rem;
+        height: 3.63rem;
+        background-color: @co;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: .12rem;
+        .pic{
+            height: 1.49rem;
+            display: flex;
+            align-items: center;
+            position: relative;
+            img{
+                width: 1.03rem;
+                height: 1.03rem;
+            }
+            .infor{
+                display: flex;
+                flex-direction: column;
+                margin-left: .27rem;
+                font-size: .24rem;
+                .fir{                   
+                    color: #686868;
+                    margin-bottom: .2rem;
+                }
+                .sec{
+                    color: #a7a7a7;
+                }
+            }
+            .pric{
+                color: #e7343a;
+                font-size: .28rem;
+                position: absolute;
+                right: 0;
+                top: .42rem;
+            }
+        }
+        .buy_num{
+            height: 1.12rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #f0f0f0;
+            em{
+                color: #646464;
+                font-size: .22rem;
+            }
+            .data{
+                    color: #434343;
+                    height: .66rem;
+                .box{                   
+                    width: .74rem;    
+                    display: inline-block;
+                    border: 1px solid #515151;
+                    border-radius: .05rem;
+                    text-align: center;
+                    line-height: .64rem;     
+                    font-size: .3rem;         
+                }
+                .first{
+                    margin-right: .1rem;
+                }
+                .last{
+                    margin-left: .1rem;
+                }
+                .num{                   
+                    width: 1.19rem;
+                    
+                    display: inline-block;
+                    border: 1px solid #515151;
+                    border-radius: .05rem;
+                    text-align: center;
+                    line-height: .64rem;
+                    font-size: .3rem;
+                }
+            }
+        }
+        .way{
+            height: .97rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            em{
+                color: #646464;
+                font-size: .22rem;
+            }
+        }
+
+    }
+    .cheaper{
+        height: 2.07rem;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: .12rem;
+        .use{
+            height: 50%;
+            padding: 0 .36rem 0 .26rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: .02rem solid #f1f1f1;
+            span{
+                color: #626262;
+                font-size: .22rem;
+            }
+        }
+        .integral{
+            height: 50%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 .26rem;
+            span{
+                font-size: .22rem;
+                color: #626262;
+            }
+            p{
+                display: flex;
+                align-items: center;
+                input{
+                    width: 1.49rem;
+                    height: .72rem;
+                    border: .02rem solid #d9d9d9;
+                    margin-right: .09rem;
+                    &::placeholder{
+                        text-align: center;
+                        line-height: .72rem;
+                        font-size: .22rem;
+                        color: #ebebeb;
+                    }
+                }
+                a{
+                    width: .74rem;
+                    height: .74rem;
+                    background-color: @color;
+                    color: @co;
+                    text-align: center;
+                    line-height: .74rem;
+                    border-radius: .04rem;
+                    margin-right: .2rem;
+                }
+                i{
+                    font-size: .22rem;
+                    color: #888888;
+                    em{
+                        color: #de393f;
+                    }
+                }
+            }
+        }
+    }
+    .price{
+        height: 5.2rem;
+        display: flex;
+        flex-direction: column;
+        padding: 0 .38rem 0 .26rem;
+        background-color: @co;
+        border-bottom: 1px solid #ededed;
+        .add{
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-bottom: 1px solid #efefef;
+            p{
+                display: flex;
+                justify-content: space-between;
+                span{
+                    font-size: .22rem;
+                    color: #5d5d5d;
+                    margin-bottom: .17rem;
+                }
+                i{
+                    color: #eb3149;
+                    font-size: .18rem;
+                }
+            }
+        }
+        .sum{
+            height: 50%;
+            display: flex;
+            flex-direction: column;           
+            p{
+                height: 50%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                span{
+                    font-size: .34rem;
+                    color: #646464;
+                }
+                i{
+                    font-size: .28rem;
+                    color: #e73239;
+                }
+            }
+            a{
+                height: 50%;
+                align-self: center;
+                width: 3.57rem;
+                height: 1.12rem;
+                background-color: @color;
+                color: @co;
+                font-size: .3rem;
+                text-align: center;
+                line-height: 1.12rem;
+                border-radius: .04rem;
+            }
+        }
+    }
+}
+// 尾部
+footer{
+    height: 1.21rem;
+    background-color: #fff;
+    padding: 0 .67rem 0 .5rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    p{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .iconfont{
+            font-size: .4rem;
+            color: #7a7a7a;
+        }
+        span{
+            font-size: .18rem;
+            color: #8c8c8c;
+        }      
+    }
+    .cur{
+        i{
+            color: @color;
+        }
+        span{
+            color:@color;
+        }
+    }
+}

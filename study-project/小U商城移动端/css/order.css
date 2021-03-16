@@ -1,0 +1,312 @@
+@import "reset.css";
+html,
+body,
+.page {
+  height: 100%;
+}
+.page {
+  display: flex;
+  flex-direction: column;
+  max-width: 750px;
+  margin: auto;
+}
+header {
+  height: 0.9rem;
+  background-color: #f26b11;
+  padding: 0 0.32rem 0 0.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header span {
+  font-size: 0.34rem;
+  color: #fffdfe;
+}
+header .iconfont {
+  color: #feffff;
+  font-size: 0.4rem;
+}
+header .first {
+  font-size: 0.55rem;
+}
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+main .information {
+  height: 1.5rem;
+  padding: 0 0.3rem;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.12rem;
+}
+main .information p {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 0.24rem;
+  color: #606060;
+}
+main .information p strong {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.2rem;
+}
+main .information p strong i {
+  margin-right: 0.14rem;
+}
+main .information p .add {
+  display: flex;
+}
+main .information p .add .name_add {
+  width: 1.26rem;
+}
+main .information .iconfont {
+  display: inline-block;
+  width: 0.58rem;
+  line-height: 1.5rem;
+  text-align: right;
+  color: #aaaaaa;
+}
+main .shop {
+  padding: 0 0.3rem 0 0.25rem;
+  height: 3.63rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.12rem;
+}
+main .shop .pic {
+  height: 1.49rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+main .shop .pic img {
+  width: 1.03rem;
+  height: 1.03rem;
+}
+main .shop .pic .infor {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0.27rem;
+  font-size: 0.24rem;
+}
+main .shop .pic .infor .fir {
+  color: #686868;
+  margin-bottom: 0.2rem;
+}
+main .shop .pic .infor .sec {
+  color: #a7a7a7;
+}
+main .shop .pic .pric {
+  color: #e7343a;
+  font-size: 0.28rem;
+  position: absolute;
+  right: 0;
+  top: 0.42rem;
+}
+main .shop .buy_num {
+  height: 1.12rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f0f0f0;
+}
+main .shop .buy_num em {
+  color: #646464;
+  font-size: 0.22rem;
+}
+main .shop .buy_num .data {
+  color: #434343;
+  height: 0.66rem;
+}
+main .shop .buy_num .data .box {
+  width: 0.74rem;
+  display: inline-block;
+  border: 1px solid #515151;
+  border-radius: 0.05rem;
+  text-align: center;
+  line-height: 0.64rem;
+  font-size: 0.3rem;
+}
+main .shop .buy_num .data .first {
+  margin-right: 0.1rem;
+}
+main .shop .buy_num .data .last {
+  margin-left: 0.1rem;
+}
+main .shop .buy_num .data .num {
+  width: 1.19rem;
+  display: inline-block;
+  border: 1px solid #515151;
+  border-radius: 0.05rem;
+  text-align: center;
+  line-height: 0.64rem;
+  font-size: 0.3rem;
+}
+main .shop .way {
+  height: 0.97rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .shop .way em {
+  color: #646464;
+  font-size: 0.22rem;
+}
+main .cheaper {
+  height: 2.07rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.12rem;
+}
+main .cheaper .use {
+  height: 50%;
+  padding: 0 0.36rem 0 0.26rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.02rem solid #f1f1f1;
+}
+main .cheaper .use span {
+  color: #626262;
+  font-size: 0.22rem;
+}
+main .cheaper .integral {
+  height: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.26rem;
+}
+main .cheaper .integral span {
+  font-size: 0.22rem;
+  color: #626262;
+}
+main .cheaper .integral p {
+  display: flex;
+  align-items: center;
+}
+main .cheaper .integral p input {
+  width: 1.49rem;
+  height: 0.72rem;
+  border: 0.02rem solid #d9d9d9;
+  margin-right: 0.09rem;
+}
+main .cheaper .integral p input::placeholder {
+  text-align: center;
+  line-height: 0.72rem;
+  font-size: 0.22rem;
+  color: #ebebeb;
+}
+main .cheaper .integral p a {
+  width: 0.74rem;
+  height: 0.74rem;
+  background-color: #f26b11;
+  color: #fff;
+  text-align: center;
+  line-height: 0.74rem;
+  border-radius: 0.04rem;
+  margin-right: 0.2rem;
+}
+main .cheaper .integral p i {
+  font-size: 0.22rem;
+  color: #888888;
+}
+main .cheaper .integral p i em {
+  color: #de393f;
+}
+main .price {
+  height: 5.2rem;
+  display: flex;
+  flex-direction: column;
+  padding: 0 0.38rem 0 0.26rem;
+  background-color: #fff;
+  border-bottom: 1px solid #ededed;
+}
+main .price .add {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 1px solid #efefef;
+}
+main .price .add p {
+  display: flex;
+  justify-content: space-between;
+}
+main .price .add p span {
+  font-size: 0.22rem;
+  color: #5d5d5d;
+  margin-bottom: 0.17rem;
+}
+main .price .add p i {
+  color: #eb3149;
+  font-size: 0.18rem;
+}
+main .price .sum {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+}
+main .price .sum p {
+  height: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+main .price .sum p span {
+  font-size: 0.34rem;
+  color: #646464;
+}
+main .price .sum p i {
+  font-size: 0.28rem;
+  color: #e73239;
+}
+main .price .sum a {
+  height: 50%;
+  align-self: center;
+  width: 3.57rem;
+  height: 1.12rem;
+  background-color: #f26b11;
+  color: #fff;
+  font-size: 0.3rem;
+  text-align: center;
+  line-height: 1.12rem;
+  border-radius: 0.04rem;
+}
+footer {
+  height: 1.21rem;
+  background-color: #fff;
+  padding: 0 0.67rem 0 0.5rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer p .iconfont {
+  font-size: 0.4rem;
+  color: #7a7a7a;
+}
+footer p span {
+  font-size: 0.18rem;
+  color: #8c8c8c;
+}
+footer .cur i {
+  color: #f26b11;
+}
+footer .cur span {
+  color: #f26b11;
+}

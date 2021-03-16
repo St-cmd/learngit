@@ -1,0 +1,201 @@
+@import "reset.css";
+html,
+body,
+.page {
+  height: 100%;
+}
+.page {
+  display: flex;
+  flex-direction: column;
+  max-width: 750px;
+  margin: auto;
+}
+header {
+  height: 0.9rem;
+  background-color: #f26b11;
+  padding: 0 0.32rem 0 0.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header span {
+  font-size: 0.34rem;
+  color: #fffdfe;
+}
+header .iconfont {
+  color: #feffff;
+  font-size: 0.4rem;
+}
+header .first {
+  font-size: 0.55rem;
+}
+.mid {
+  height: 12.63rem;
+  display: flex;
+  flex: 1;
+}
+.mid aside {
+  width: 22%;
+  overflow: auto;
+  background: #fff;
+  border-right: 1px solid #d9d9d9;
+  display: flex;
+  flex-direction: column;
+  padding-top: 0.43rem;
+}
+.mid aside p {
+  height: 9.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.mid aside p a {
+  height: 0.54rem;
+  width: 100%;
+  text-align: center;
+  line-height: 0.52rem;
+  color: #666666;
+  font-size: 0.26rem;
+}
+.mid aside p .cur {
+  border-left: 0.05rem solid #f26b11;
+  box-sizing: border-box;
+  color: #f26b11;
+}
+.mid main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: auto;
+  background: #fff;
+}
+.mid main .shampoo {
+  height: 6.1rem;
+  display: flex;
+  flex-direction: column;
+}
+.mid main .shampoo .top {
+  width: 100%;
+  height: 0.96rem;
+  padding: 0.57rem 0.44rem 0 0.56rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mid main .shampoo .top span {
+  font-size: 0.26rem;
+  color: #464646;
+}
+.mid main .shampoo .top em a {
+  color: #666666;
+  font-size: 0.24rem;
+}
+.mid main .shampoo .top em .iconfont {
+  font-size: 0.12rem;
+  color: #666666;
+  margin-left: 0.05rem;
+}
+.mid main .shampoo .shop {
+  display: flex;
+  padding: 0 0.38rem 0 0.27rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.mid main .shampoo .shop li {
+  padding-top: 0.38rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.mid main .shampoo .shop li img {
+  margin-bottom: 0.23rem;
+}
+.mid main .shampoo .shop li p {
+  font-size: 0.24rem;
+  color: #868686;
+}
+.mid main .shampoo .shop li:nth-child(1) img {
+  width: 1.46rem;
+  height: 1.43rem;
+}
+.mid main .shampoo .shop li:nth-child(2) img {
+  width: 1.21rem;
+  height: 1.42rem;
+}
+.mid main .shampoo .shop li:nth-child(3) img {
+  width: 1.42rem;
+  height: 1.44rem;
+}
+.mid main .shampoo .shop li:nth-child(4) img {
+  width: 1.1rem;
+  height: 1.49rem;
+}
+.mid main .shampoo .shop li:nth-child(5) img {
+  width: 0.68rem;
+  height: 1.5rem;
+}
+.mid main .shampoo .shop li:nth-child(6) img {
+  width: 1.25rem;
+  height: 1.34rem;
+}
+.mid main .hair {
+  height: 3.25rem;
+  display: flex;
+  flex-direction: column;
+}
+.mid main .hair .top {
+  width: 100%;
+  height: 0.96rem;
+  padding: 0.57rem 0.44rem 0 0.56rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mid main .hair .top span {
+  font-size: 0.26rem;
+  color: #464646;
+}
+.mid main .hair .top em a {
+  color: #666666;
+  font-size: 0.24rem;
+}
+.mid main .hair .top em .iconfont {
+  font-size: 0.12rem;
+  color: #666666;
+  margin-left: 0.05rem;
+}
+.mid main .hair .shop {
+  display: flex;
+  padding: 0 0.38rem 0 0.27rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.mid main .hair .shop li {
+  padding-top: 0.38rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.mid main .hair .shop li img {
+  margin-bottom: 0.23rem;
+}
+.mid main .hair .shop li p {
+  font-size: 0.24rem;
+  color: #868686;
+}
+.mid main .hair .shop li:nth-child(1) img {
+  width: 0.77rem;
+  height: 1.34rem;
+}
+.mid main .hair .shop li:nth-child(2) img {
+  width: 0.43rem;
+  height: 1.36rem;
+}
+.mid main .hair .shop li:nth-child(3) img {
+  width: 1.35rem;
+  height: 1.41rem;
+}

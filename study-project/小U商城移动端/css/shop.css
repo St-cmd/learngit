@@ -1,0 +1,274 @@
+@import "reset.css";
+html,
+body,
+.page {
+  height: 100%;
+}
+.page {
+  display: flex;
+  flex-direction: column;
+  max-width: 750px;
+  margin: auto;
+}
+header {
+  height: 0.9rem;
+  background-color: #f26b11;
+  padding: 0 0.32rem 0 0.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header span {
+  font-size: 0.34rem;
+  color: #fffdfe;
+}
+header .iconfont {
+  color: #feffff;
+  font-size: 0.4rem;
+}
+header .first {
+  font-size: 0.55rem;
+}
+main {
+  flex: 1;
+  overflow: auto;
+  background-color: #fff;
+}
+main .list {
+  height: 9.47rem;
+  background-color: #fff;
+  overflow: hidden;
+}
+main .list li {
+  height: 1.74rem;
+  width: 100%;
+  display: flex;
+  padding: 0 0.3rem 0 0.25rem;
+  box-sizing: border-box;
+  align-items: center;
+  box-shadow: 1px 1px 3px 4px #f7f7f7;
+  margin-top: 0.25rem;
+  position: relative;
+}
+main .list li .circle {
+  width: 0.34rem;
+  height: 0.34rem;
+  border: 1px solid #d0d0d0;
+  border-radius: 50%;
+  background-color: #fff;
+}
+main .list li .cur {
+  border: 1px solid #bc463a;
+  background: url(../images/index_images/right.jpg) no-repeat center;
+  background-size: 0.2rem;
+}
+main .list li .shop4_pic {
+  width: 1.02rem;
+  height: 1.02rem;
+  margin: 0 0.36rem 0 0.43rem;
+}
+main .list li p {
+  display: flex;
+  flex-direction: column;
+}
+main .list li p strong {
+  width: 1.3rem;
+  font-size: 0.26rem;
+  color: #343434;
+  margin-bottom: 0.2rem;
+}
+main .list li p i {
+  color: #666666;
+  font-size: 0.22rem;
+  margin-bottom: 0.2rem;
+}
+main .list li p b {
+  color: #e43a3d;
+  font-size: 0.24rem;
+}
+main .list li span {
+  width: 2.1rem;
+  height: 0.58rem;
+  border: 1px solid #454545;
+  border-radius: 0.05rem;
+  display: flex;
+  position: absolute;
+  right: 0.32rem;
+  bottom: 0.22rem;
+}
+main .list li span .box {
+  width: 0.63rem;
+  height: 100%;
+  text-align: center;
+  line-height: 0.58rem;
+  color: #454545;
+  font-size: 0.15rem;
+}
+main .list li span .num {
+  width: 0.84rem;
+  height: 0.58rem;
+  text-align: center;
+  line-height: 0.59rem;
+  border-right: 1px solid #454545;
+}
+main .list li span .first {
+  border-right: 1px solid #454545;
+}
+main .list .cur {
+  height: 1.74rem;
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  padding: 0;
+  box-shadow: 1px 1px 3px 4px #f7f7f7;
+  margin-top: 0.25rem;
+}
+main .list .cur .shop4_pic {
+  width: 1.02rem;
+  height: 1.02rem;
+  margin: 0 0.36rem 0 0;
+}
+main .list .cur p {
+  display: flex;
+  flex-direction: column;
+}
+main .list .cur p strong {
+  width: 1.3rem;
+  font-size: 0.26rem;
+  color: #343434;
+  margin-bottom: 0.2rem;
+}
+main .list .cur p i {
+  color: #666666;
+  font-size: 0.22rem;
+  margin-bottom: 0.2rem;
+}
+main .list .cur p b {
+  color: #e43a3d;
+  font-size: 0.24rem;
+}
+main .list .cur span {
+  width: 2.1rem;
+  height: 0.58rem;
+  border: 1px solid #454545;
+  border-radius: 0.05rem;
+  display: flex;
+  position: absolute;
+  right: 1.28rem;
+  bottom: 0.22rem;
+}
+main .list .cur span .box {
+  width: 0.63rem;
+  height: 100%;
+  text-align: center;
+  line-height: 0.58rem;
+  color: #454545;
+  font-size: 0.15rem;
+}
+main .list .cur span .num {
+  flex: 1;
+  text-align: center;
+  line-height: 0.59rem;
+  border-right: 1px solid #454545;
+}
+main .list .cur span .first {
+  border-right: 1px solid #454545;
+}
+main .list .cur .del {
+  width: 0.98rem;
+  height: 100%;
+  background-color: #e43a3d;
+  color: #fffeff;
+  text-align: center;
+  line-height: 1.72rem;
+  align-self: flex-end;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.add {
+  display: flex;
+  padding-left: 0.24rem;
+  align-items: center;
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+  background-color: #fff;
+  height: 1.17rem;
+}
+.add .circle {
+  width: 0.34rem;
+  height: 0.34rem;
+  border: 1px solid #d0d0d0;
+  border-radius: 50%;
+  background-color: #fff;
+  margin-right: 0.15rem;
+}
+.add .cur {
+  border: 1px solid #bc463a;
+  background: url(../images/index_images/right.jpg) no-repeat center;
+  background-size: 0.2rem;
+}
+.add span {
+  color: #666666;
+}
+.add p {
+  width: 3.78rem;
+  height: 0.64rem;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  padding-right: 0.4rem;
+  box-sizing: border-box;
+}
+.add p i {
+  font-size: 0.3rem;
+  color: #333333;
+}
+.add p i b {
+  color: #e3383e;
+  font-size: 0.22rem;
+}
+.add p em {
+  display: block;
+  font-size: 0.18rem;
+  color: #a5a5a5;
+}
+.add a {
+  width: 2.47rem;
+  height: 1.15rem;
+  background-color: #f26b11;
+  color: #fff;
+  text-align: center;
+  line-height: 1.15rem;
+  font-size: 0.28rem;
+}
+footer {
+  height: 1.21rem;
+  background-color: #fff;
+  padding: 0 0.67rem 0 0.5rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer p .iconfont {
+  font-size: 0.4rem;
+  color: #7a7a7a;
+}
+footer p span {
+  font-size: 0.18rem;
+  color: #8c8c8c;
+}
+footer .cur i {
+  color: #f26b11;
+}
+footer .cur span {
+  color: #f26b11;
+}

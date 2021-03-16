@@ -1,0 +1,151 @@
+@import "reset.css";
+html,
+body,
+.page {
+  height: 100%;
+}
+.page {
+  display: flex;
+  flex-direction: column;
+  max-width: 750px;
+  margin: auto;
+}
+header {
+  height: 0.66rem;
+  background-color: #fff;
+  padding: 0 0.32rem 0 0.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header img {
+  width: 1.48rem;
+  height: 0.3rem;
+}
+header .iconfont {
+  color: #000000;
+  font-size: 0.3rem;
+}
+header .first {
+  font-size: 0.4rem;
+}
+main {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  overflow: auto;
+  background-color: #fff;
+  margin-bottom: 1.21rem;
+}
+main .top {
+  height: 1.31rem;
+  display: flex;
+  justify-content: center;
+}
+main .top input {
+  width: 6.24rem;
+  height: 0.8rem;
+  background-color: #f26b11;
+  color: #fff;
+  border: none;
+  border-radius: 0.4rem;
+  margin-top: 0.23rem;
+  display: flex;
+  justify-content: center;
+}
+main .top input::placeholder {
+  font-size: 0.26rem;
+  color: #fff;
+  text-align: center;
+}
+main .list {
+  padding: 0 0.25rem;
+  box-sizing: border-box;
+}
+main .list li {
+  height: 2.04rem;
+  display: flex;
+  border-bottom: 1px solid #d1d1d1;
+}
+main .list li .pic {
+  width: 1.65rem;
+  height: 2.04rem;
+  padding-top: 0.26rem;
+  box-sizing: border-box;
+}
+main .list li p {
+  width: 4.94rem;
+  margin-top: 0.18rem;
+  margin-left: 0.43rem;
+  display: flex;
+  flex-direction: column;
+}
+main .list li p span {
+  font-size: 0.24rem;
+  margin-bottom: 0.2rem;
+  color: #333333;
+}
+main .list li p i {
+  font-size: 0.24rem;
+  margin-bottom: 0.2rem;
+  color: #e73a40;
+}
+main .list li p em {
+  font-size: 0.22rem;
+  color: #999999;
+}
+main .list li:nth-child(1) img {
+  width: 1.25rem;
+  height: 1.45rem;
+  margin-left: 0.26rem;
+}
+main .list li:nth-child(2) img {
+  width: 1.45rem;
+  height: 1.51rem;
+  margin-left: 0.2rem;
+}
+main .list li:nth-child(3) img {
+  width: 1.11rem;
+  height: 1.52rem;
+  margin-left: 0.35rem;
+}
+main .list li:nth-child(4) img {
+  width: 0.69rem;
+  height: 1.52rem;
+  margin-left: 0.56rem;
+}
+footer {
+  height: 1.21rem;
+  background-color: #fff;
+  padding: 0 0.67rem 0 0.5rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 7.5rem;
+  position: fixed;
+  left: 50%;
+  margin-left: -3.75rem;
+  bottom: 0;
+  border-top: 1px solid #ebebeb;
+}
+footer p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer p .iconfont {
+  font-size: 0.4rem;
+  color: #7a7a7a;
+}
+footer p span {
+  font-size: 0.18rem;
+  color: #8c8c8c;
+}
+footer .cur i {
+  color: #ef6b16;
+}
+footer .cur span {
+  color: #ef6b16;
+}

@@ -1,0 +1,186 @@
+@import "reset.css";
+html,
+body,
+.page {
+  height: 100%;
+}
+.page {
+  display: flex;
+  flex-direction: column;
+  max-width: 750px;
+  margin: auto;
+}
+header {
+  height: 0.88rem;
+  background-color: #f26b11;
+  padding: 0 0.32rem 0 0.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header span {
+  font-size: 0.34rem;
+  color: #fffdfe;
+}
+header .iconfont {
+  color: #feffff;
+  font-size: 0.4rem;
+}
+header .first {
+  font-size: 0.55rem;
+}
+main {
+  display: flex;
+  flex: 1;
+  overflow: auto;
+  flex-direction: column;
+  background-color: #fff;
+}
+main .top {
+  height: 2.09rem;
+  background: #f26b11;
+  padding: 0 0.37rem 0 0.33rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main .top p {
+  display: flex;
+  align-items: center;
+}
+main .top p img {
+  width: 1.57rem;
+  height: 1.54rem;
+  margin-right: 0.26rem;
+}
+main .top p span {
+  display: flex;
+  flex-direction: column;
+}
+main .top p span i {
+  color: #fffaf4;
+  font-size: 0.28rem;
+  margin-bottom: 0.15rem;
+}
+main .top p span em {
+  font-size: 0.2rem;
+  color: #26171a;
+  font-style: italic;
+}
+main .top a {
+  width: 1.59rem;
+  height: 0.72rem;
+  background-color: #fff;
+  border-radius: 0.05rem;
+  color: #f26b11;
+  font-size: 0.26rem;
+  text-align: center;
+  line-height: 0.72rem;
+}
+main nav {
+  display: flex;
+  height: 1.45rem;
+  padding: 0 0.68rem 0 0.52rem;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.2rem;
+  background-color: #fff;
+}
+main nav p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main nav p span {
+  font-size: 0.22rem;
+  color: #616161;
+}
+main nav p .iconfont {
+  color: #797979;
+  font-size: 0.5rem;
+  margin-bottom: 0.2rem;
+}
+main section {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+main section p {
+  height: 1.12rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #d9d9d9;
+}
+main section p span {
+  display: flex;
+  align-items: center;
+}
+main section p span img {
+  margin-right: 0.26rem;
+  margin-left: 0.38rem;
+}
+main section p span em {
+  font-size: 0.26rem;
+  color: #5f5f5f;
+}
+main section p .iconfont {
+  color: #b5b5b5;
+  font-size: 0.26rem;
+  margin-right: 0.35rem;
+}
+main section p b strong {
+  color: #f26b11;
+  font-size: 0.24rem;
+  margin-right: 0.2rem;
+}
+main section p:nth-child(1) img {
+  width: 0.32rem;
+  height: 0.38rem;
+}
+main section p:nth-child(2) img {
+  width: 0.32rem;
+  height: 0.36rem;
+}
+main section p:nth-child(3) img {
+  width: 0.35rem;
+  height: 0.31rem;
+}
+main section p:nth-child(4) img {
+  width: 0.32rem;
+  height: 0.32rem;
+}
+main section p:nth-child(5) img {
+  width: 0.37rem;
+  height: 0.33rem;
+}
+footer {
+  height: 1.21rem;
+  background-color: #fff;
+  padding: 0 0.67rem 0 0.5rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer p .iconfont {
+  font-size: 0.4rem;
+  color: #7a7a7a;
+}
+footer p span {
+  font-size: 0.18rem;
+  color: #8c8c8c;
+}
+footer .cur i {
+  color: #f26b11;
+}
+footer .cur span {
+  color: #f26b11;
+}

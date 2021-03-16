@@ -1,0 +1,65 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "429349",
+      "name": "用户",
+      "font_class": "user",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "1115465",
+      "name": "用户",
+      "font_class": "yonghu",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "1242678",
+      "name": "菜单",
+      "font_class": "ego-caidan",
+      "unicode": "e62f",
+      "unicode_decimal": 58927
+    },
+    {
+      "icon_id": "3216204",
+      "name": "文件夹",
+      "font_class": "icon--",
+      "unicode": "e772",
+      "unicode_decimal": 59250
+    },
+    {
+      "icon_id": "3521808",
+      "name": "文件",
+      "font_class": "wenjian",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "6500752",
+      "name": "箭头",
+      "font_class": "jiantou",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    },
+    {
+      "icon_id": "6850420",
+      "name": "文件",
+      "font_class": "wenjian1",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "14488415",
+      "name": "推出，退出",
+      "font_class": "ziyuan46",
+      "unicode": "e773",
+      "unicode_decimal": 59251
+    }
+  ]
+}

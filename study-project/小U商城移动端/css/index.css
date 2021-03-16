@@ -1,0 +1,423 @@
+@import "reset.css";
+.page {
+  display: flex;
+  flex-direction: column;
+  max-width: 750px;
+  margin: auto;
+  /*修改滚动条样式*/
+  /*滚动条的样式*/
+  /*滑块的样式*/
+}
+.page::-webkit-scrollbar {
+  width: 4px;
+}
+.page::-webkit-scrollbar-track {
+  background: #efefef;
+  border-radius: 2px;
+}
+.page::-webkit-scrollbar-thumb {
+  background: #bfbfbf;
+  border-radius: 10px;
+}
+header {
+  display: flex;
+  height: 0.85rem;
+  background: #fff;
+  padding: 0 0.23rem 0 0.25rem;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e4e4e4;
+}
+header img {
+  width: 1.47rem;
+  height: 0.32rem;
+}
+header input {
+  width: 3.04rem;
+  height: 0.39rem;
+  background-color: #eeeeee;
+  border: none;
+  border-radius: 0.05rem;
+}
+header input::placeholder {
+  text-align: center;
+  color: #b2b2b2;
+}
+header .iconfont {
+  font-size: 0.5rem;
+}
+#nav_box {
+  height: 0.77rem;
+  background-color: #fff;
+  padding: 0 0.2rem 0 0.32rem;
+  box-sizing: border-box;
+  display: flex;
+  position: relative;
+}
+#nav_box .recom {
+  width: 0.6rem;
+  color: #ee0045;
+  border-bottom: 0.04rem solid #ee0045;
+  font-size: 0.26rem;
+  box-sizing: border-box;
+  line-height: 0.77rem;
+}
+#nav_box .arrow {
+  width: 0.76rem;
+  height: 0.77rem;
+  background-color: #fff;
+  position: absolute;
+  right: 0;
+  top: 0;
+  text-align: center;
+  line-height: 0.77rem;
+}
+#nav_box nav {
+  overflow-x: auto;
+  width: 5.67rem;
+  height: 0.34rem;
+  border-left: 1px solid #f1f1f1;
+  align-self: center;
+  margin-left: 0.2rem;
+}
+#nav_box nav a {
+  color: #000000;
+  font-size: 0.26rem;
+  line-height: 0.34rem;
+  padding: 0 0.17rem;
+  align-self: center;
+}
+#nav_box .iconfont {
+  color: #c1c1c1;
+}
+#ban_box img {
+  height: 2.94rem;
+  width: 100%;
+}
+#menu_box {
+  height: 1.79rem;
+  background: #fff;
+  display: flex;
+  padding: 0 0.5rem 0 0.39rem;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.3rem;
+}
+#menu_box p {
+  display: flex;
+  flex-direction: column;
+}
+#menu_box p img {
+  align-self: center;
+  height: 0.62rem;
+  width: 0.62rem;
+}
+#menu_box p span {
+  font-size: 0.24rem;
+  color: #656565;
+  text-align: center;
+  margin-top: 0.3rem;
+}
+#limited {
+  height: 3.8rem;
+  background-color: #fff;
+  display: flex;
+  margin-bottom: 0.3rem;
+}
+#limited .limited_left {
+  height: 3.8rem;
+  width: 3.78rem;
+  border-right: 1px solid #f0f0f0;
+  padding-left: 0.2rem;
+  box-sizing: border-box;
+  position: relative;
+}
+#limited .limited_left div {
+  padding-top: 0.2rem;
+  display: flex;
+  margin-bottom: 0.07rem;
+}
+#limited .limited_left div .pic {
+  width: 0.3rem;
+  height: 0.31rem;
+}
+#limited .limited_left div h2 {
+  font-size: 0.28rem;
+  color: #ee0045;
+  margin-left: 0.15rem;
+}
+#limited .limited_left span {
+  font-size: 0.22rem;
+  color: #787878;
+}
+#limited .limited_left p {
+  display: flex;
+  margin-top: 0.1rem;
+  margin-bottom: 0.3rem;
+}
+#limited .limited_left p i {
+  width: 0.42rem;
+  height: 0.42rem;
+  background: #27272f;
+  border-radius: 0.05rem;
+  color: #feffff;
+  text-align: center;
+  line-height: 0.42rem;
+  font-size: 0.18rem;
+  margin-right: 0.08rem;
+}
+#limited .limited_left p i.last {
+  margin-right: 0.27rem;
+}
+#limited .limited_left p b {
+  margin-right: 0.08rem;
+}
+#limited .limited_left p strong {
+  width: 0.96rem;
+  height: 0.4rem;
+  background: url(../images/index_images/bg.jpg);
+  color: #1a0f1d;
+  font-size: 0.24rem;
+  text-align: center;
+  line-height: 0.4rem;
+}
+#limited .limited_left .pic_shop {
+  width: 2.37rem;
+  height: 2rem;
+  margin-left: 0.35rem;
+}
+#limited .limited_left em {
+  display: inline-block;
+  width: 0.84rem;
+  height: 0.84rem;
+  background-color: #ee0045;
+  color: #fbfffd;
+  font-size: 0.22rem;
+  text-align: center;
+  line-height: 0.84rem;
+  border-radius: 50%;
+  position: absolute;
+  right: 0.3rem;
+  bottom: 0.25rem;
+}
+#limited .limited_right {
+  width: 3.73rem;
+  height: 3.8rem;
+}
+#limited .limited_right .top {
+  width: 3.72rem;
+  height: 1.87rem;
+  padding-left: 0.19rem;
+  box-sizing: border-box;
+  border-bottom: 1px solid #eee;
+  display: flex;
+}
+#limited .limited_right .top .describe {
+  width: 1.67rem;
+  height: 1.87rem;
+  padding-top: 0.2rem;
+  box-sizing: border-box;
+}
+#limited .limited_right .top .describe h2 {
+  color: #ee0045;
+  font-size: 0.28rem;
+  width: 1.2rem;
+  height: 0.28rem;
+  display: inline-block;
+}
+#limited .limited_right .top .describe span {
+  display: inline-block;
+  width: 0.33rem;
+  height: 0.25rem;
+  background: #ee0045;
+  color: #f5f5f7;
+  font-size: 0.18rem;
+  text-align: center;
+  line-height: 0.25rem;
+}
+#limited .limited_right .top .describe b {
+  display: inline-block;
+  font-size: 0.2rem;
+  margin: 0.11rem 0 0.3rem;
+  color: #7c7c7c;
+}
+#limited .limited_right .top .describe .pic_brand {
+  width: 0.9rem;
+  height: 0.24rem;
+  margin-left: 0.06rem;
+}
+#limited .limited_right .top .shop1_pic {
+  width: 1.27rem;
+  height: 1.79rem;
+  margin: 0.05rem 0 0 0.2rem;
+}
+#limited .limited_right .bottom {
+  width: 3.72rem;
+  height: 1.89rem;
+  display: flex;
+}
+#limited .limited_right .bottom .bottom_left {
+  width: 50%;
+  height: 1.9rem;
+  padding: 0.17rem 0 0 0.2rem;
+  box-sizing: border-box;
+  border-right: 1px solid #f0f0f0;
+}
+#limited .limited_right .bottom .bottom_left h2 {
+  color: #ee0045;
+  font-size: 0.28rem;
+  width: 1.2rem;
+  height: 0.28rem;
+}
+#limited .limited_right .bottom .bottom_left span {
+  display: inline-block;
+  font-size: 0.2rem;
+  margin: 0.08rem 0 0.07rem;
+  color: #7c7c7c;
+}
+#limited .limited_right .bottom .bottom_left .shop2_pic {
+  width: 0.66rem;
+  height: 1rem;
+  margin-left: 0.37rem;
+}
+#limited .limited_right .bottom .bottom_right {
+  width: 50%;
+  height: 1.9rem;
+  padding: 0.17rem 0 0 0.2rem;
+  box-sizing: border-box;
+  border-right: 1px solid #f0f0f0;
+}
+#limited .limited_right .bottom .bottom_right h2 {
+  color: #ee0045;
+  font-size: 0.28rem;
+  width: 1.2rem;
+  height: 0.28rem;
+}
+#limited .limited_right .bottom .bottom_right span {
+  display: inline-block;
+  font-size: 0.2rem;
+  margin: 0.08rem 0 0.07rem;
+  color: #7c7c7c;
+}
+#limited .limited_right .bottom .bottom_right .shop3_pic {
+  width: 1.05rem;
+  height: 0.91rem;
+  margin-left: 0.21rem;
+}
+#layer {
+  margin-bottom: 0.3rem;
+  height: 1.88rem;
+}
+#layer .bar_pic {
+  height: 1.88rem;
+  width: 100%;
+}
+main {
+  height: 11.05rem;
+  background-color: #fff;
+  border-bottom: 1px solid #ebebeb;
+  padding: 0.2rem 0.2rem 0 0.2rem;
+  box-sizing: border-box;
+  margin-bottom: 1.21rem;
+}
+main .top {
+  height: 0.7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.2rem;
+}
+main .top a {
+  height: 0.7rem;
+  flex: 1;
+  border: 1px solid #d0d0d0;
+  text-align: center;
+  line-height: 0.7rem;
+  font-size: 0.28rem;
+  box-sizing: border-box;
+}
+main .top .cur {
+  background-color: #f26b11;
+  color: #fffaff;
+}
+main .list li {
+  height: 3rem;
+  width: 100%;
+  box-shadow: 1px 1px 2px 5px #f6f6f6;
+  margin-bottom: 0.3rem;
+  display: flex;
+}
+main .list li .pic {
+  width: 3.04rem;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .list li .pic img {
+  width: 2.25rem;
+  height: 2.23rem;
+}
+main .list li p {
+  display: flex;
+  flex-direction: column;
+}
+main .list li p span {
+  font-size: 0.3rem;
+  margin: 0.3rem 0 0.25rem 0;
+  color: #393939;
+}
+main .list li p i {
+  font-size: 0.24rem;
+  color: #df2234;
+  margin: 0 0 0.25rem 0;
+}
+main .list li p b {
+  font-size: 0.22rem;
+  color: #979797;
+  margin: 0 0 0.25rem 0;
+}
+main .list li p a {
+  width: 1.64rem;
+  height: 0.52rem;
+  background: #f26b11;
+  color: #fffefd;
+  border-radius: 0.05rem;
+  text-align: center;
+  line-height: 0.52rem;
+  font-size: 0.24rem;
+}
+footer {
+  height: 1.21rem;
+  background-color: #fff;
+  padding: 0 0.67rem 0 0.5rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 7.5rem;
+  position: fixed;
+  left: 50%;
+  margin-left: -3.75rem;
+  bottom: 0;
+}
+footer p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer p .iconfont {
+  font-size: 0.4rem;
+  color: #7a7a7a;
+}
+footer p span {
+  font-size: 0.18rem;
+  color: #8c8c8c;
+}
+footer .cur i {
+  color: #ef6b16;
+}
+footer .cur span {
+  color: #ef6b16;
+}

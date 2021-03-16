@@ -1,0 +1,195 @@
+/* 导航 */
+#nav{
+    height: 108px;
+    background: #fff;
+}
+#nav img{
+    float: left;
+    margin: 29px 26px 0 0;
+}
+#nav i{
+    float: left;
+    display: inline-block;
+    width: 1px;
+    height: 50px;
+    background-color: #e8e8e8;
+    margin: 35px 20px 0 0;
+}
+#nav span{
+    float: left;
+    display: inline-block;
+    margin-top: 48px ;
+    font-size: 24px;
+    color: #6a6a6a;
+}
+/* banner */
+#banner{
+    height: 450px;
+    background: #ff6a6c;
+}
+#banner .banner_left{
+    float: left;
+    width: 848px;
+    height: 450px;
+}
+#banner .banner_right{
+    float: right;
+    width: 351px;
+    height: 380px;
+    background: #fff;
+    margin-top: 37px;
+    border-top: 3px solid #fd6e05;
+}
+#banner .banner_right h2{
+    font-size: 16px;
+    color: #2f2f2f;
+    width: 35px;
+    height: 68px;
+    line-height: 68px;
+    margin-left: 35px;
+}
+#banner .banner_right form{
+    width: 351px;
+    height: 257px;
+    border-bottom: 1px solid #efefef;
+}
+#banner .banner_right form .form_write{
+    margin-left: 35px;
+    width: 278px;
+    height: 34px;
+    border: 1px solid #d9d9d9;
+    margin-bottom: 14px;
+}
+#banner .banner_right form .form_first{
+    border: 1px solid #f56b12;
+}
+#banner form .form_write span{
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    border-right: 1px solid #d9d9d9;
+    /* background: #fef9f6; */
+    background: #f8f8f8;
+}
+#banner form .form_write .first{
+    background: #fef9f6;
+    border-right: 1px solid #f56b12;
+}
+#banner form .form_write input{
+    border: none;
+    padding-left: 14px;
+}
+#banner form .form_write input::placeholder{
+    font-size: 12px;
+    color: #939393;
+}
+#banner .banner_right form .form_num{
+    margin-left: 35px;
+    margin-bottom: 14px;
+}
+#banner form .form_num input{
+    width: 206px;
+    height: 34px;
+    border: 1px solid #d9d9d9;
+    padding-left: 14px;
+    box-sizing: border-box;
+    margin-right: 17px;
+}
+#banner form .form_num input::placeholder{
+    font-size: 14px;
+    color: #939393;
+}
+#banner .banner_right form button{
+    width: 284px;
+    height: 38px;
+    border: 1px solid #f26b11;
+    border-radius: 4px;
+    background: #f26b11;
+    font-size: 16px;
+    line-height: 38px;
+    text-align: center;
+    color: #fff5f8;
+    font-weight: bold;
+    margin: 10px 0 13px 32px;
+}
+#banner .banner_right form .form_auto{
+    float: left;
+    width: 279px;
+    height: 14px;
+    margin-left: 35px;
+    line-height: 14px;
+}
+#banner form .form_auto input{
+    float: left;
+}
+#banner form .form_auto i{
+    float: left;
+    display: inline-block;
+    margin-left: 7px;
+}
+#banner form .form_auto span{
+    float: right;
+}
+/* 右侧底部 */
+#banner .right_bottom span{
+    float: left;
+    display: inline-block;
+    margin-top: 20px;
+    margin-right: 30px;
+}
+#banner .right_bottom span i{
+    display: inline-block;
+    width: 4px;
+    height: 4px;   
+    border-radius: 50%;
+}
+#banner .right_bottom span:nth-child(1){
+    display: inline-block;
+    margin-left: 30px;
+    
+}
+#banner .right_bottom span:nth-child(1) i{
+    border: 1px solid #27a5f9;
+    background: #27a5f9;
+}
+#banner .right_bottom span:nth-child(2) i{
+    border: 1px solid #ec201f;
+    background: #ec201f;
+}
+#banner .right_bottom span:nth-child(3) i{
+    border: 1px solid #1cd93d;
+    background: #1cd93d;
+}
+#banner .right_bottom span b{
+    color: #606060;
+}
+#banner .right_bottom em{
+    float: right;
+    display: inline-block;
+    margin: 17px 36px 0 0;
+    font-size: 14px;
+}
+#banner .right_bottom em a{
+    color: #ef7220;
+}
+/* 底部 */
+#footer {
+    height: 119px;
+    background: #fff;
+    text-align: center;
+}
+#footer .login_area span{
+    display: inline-block;
+    margin: 43px 0 14px 0;
+}
+#footer .login_area i{
+    display: inline-block;
+    margin-left: 100px;
+}
+#footer .login_area span,#footer .login_area i{
+    color:#616161;
+    
+}
+
