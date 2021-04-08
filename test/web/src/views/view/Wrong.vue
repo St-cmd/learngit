@@ -72,10 +72,10 @@ export default {
   methods: {
     clickItem (id) {
       console.log(id)
-      this.$router.push(`/Reprint/${id}`)
+      this.$router.push(`/ChoiceQuestion/${id}`)
     },
     clickWrong () {
-      this.$router.push('/Reprint')
+      this.$router.push('/ChoiceQuestion')
     }
   },
   components: {

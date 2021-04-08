@@ -45,7 +45,7 @@ export default {
   methods: {
     async RecomandQuestion (index) {
       // 传过去获取数据
-      this.$router.push(`/Reprint/${this.category[index]._id}`)
+      this.$router.push(`/ChoiceQuestion/${this.category[index]._id}`)
     },
     async getChapter () {
       const res = await this.$http.get('/category')

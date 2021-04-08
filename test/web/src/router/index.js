@@ -5,7 +5,9 @@ import login from '@/views/login.vue'
 import register from '@/views/register.vue'
 import Me from '../views/view/Me.vue'
 import Exercise from '../views/view/Exercise.vue'
-import Reprint from '../views/view/Reprint.vue'
+import ChoiceQuestion from '../views/view/ChoiceQuestion.vue'
+import JudgedQuestion from '../views/view/JudgedQuestion.vue'
+import MultiplechoiceQuestion from '../views/view/MultiplechoiceQuestion.vue'
 import Wrong from '../views/view/Wrong.vue'
 import Chapter from '../views/view/Chapter.vue'
 import Recomand from '../views/view/same/Recomand.vue'
@@ -48,28 +50,78 @@ const routes = [
     component: print
   },
   {
-    path: '/Reprint',
-    name: 'Reprint',
-    component: Reprint
+    path: '/ChoiceQuestion',
+    name: 'ChoiceQuestion',
+    component: ChoiceQuestion
   },
   {
-    path: '/Reprint/:id',
-    name: 'Reprint',
-    component: Reprint,
+    path: '/ChoiceQuestion/:id',
+    name: 'ChoiceQuestion',
+    component: ChoiceQuestion,
     props: true
   },
   {
     // 错题
-    path: '/Reprint/:wid',
-    name: 'Reprint',
-    component: Reprint,
+    path: '/ChoiceQuestion/:wid',
+    name: 'ChoiceQuestion',
+    component: ChoiceQuestion,
     props: true
   },
   {
     // 错题
-    path: '/Reprint/:item',
-    name: 'Reprint',
-    component: Reprint,
+    path: '/ChoiceQuestion/:item',
+    name: 'ChoiceQuestion',
+    component: ChoiceQuestion,
+    props: true
+  },
+  {
+    path: '/JudgedQuestion',
+    name: 'JudgedQuestion',
+    component: JudgedQuestion
+  },
+  {
+    path: '/JudgedQuestion/:id',
+    name: 'JudgedQuestion',
+    component: JudgedQuestion,
+    props: true
+  },
+  {
+    // 错题
+    path: '/JudgedQuestion/:wid',
+    name: 'JudgedQuestion',
+    component: JudgedQuestion,
+    props: true
+  },
+  {
+    // 错题
+    path: '/JudgedQuestion/:item',
+    name: 'JudgedQuestion',
+    component: JudgedQuestion,
+    props: true
+  },
+  {
+    path: '/MultiplechoiceQuestion',
+    name: 'MultiplechoiceQuestion',
+    component: MultiplechoiceQuestion
+  },
+  {
+    path: '/MultiplechoiceQuestion/:id',
+    name: 'MultiplechoiceQuestion',
+    component: MultiplechoiceQuestion,
+    props: true
+  },
+  {
+    // 错题
+    path: '/MultiplechoiceQuestion/:wid',
+    name: 'MultiplechoiceQuestion',
+    component: MultiplechoiceQuestion,
+    props: true
+  },
+  {
+    // 错题
+    path: '/MultiplechoiceQuestion/:item',
+    name: 'MultiplechoiceQuestion',
+    component: MultiplechoiceQuestion,
     props: true
   },
   {

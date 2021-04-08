@@ -49,7 +49,7 @@ export default {
       if (id === 1) {
         this.$router.push('/Chapter')
       } else if (id === 2) {
-        this.$router.push('/Reprint')
+        this.$router.push('/MultiplechoiceQuestion')
       }
     },
     GoSame (id) {

@@ -55,7 +55,7 @@ export default {
       })
     },
     async clickItem (id) {
-      console.log('click id is ' + id)
+      // console.log('click id is ' + id)
       switch (id) {
         case '个人资料': { // TODO
           break
@@ -101,13 +101,14 @@ export default {
         }
       }
     },
+    // 取得cookie
     getCookie (name) {
       console.log('get cookie for cookie name' + name)
       var arr = document.cookie.match(
         new RegExp('(^| )' + name + '=([^;]*)(;|$)')
       )
       if (arr != null) {
-        console.log(arr)
+        // console.log(arr,'用户名')
         return unescape(arr[2])
       }
       return null
@@ -121,7 +122,8 @@ export default {
   position: relative;
   text-align: center;
   .username {
-    font-size: 20px;
+    font-size: 24px;
+    font-weight: bold;
   }
   h1 {
     position: absolute;
@@ -135,7 +137,6 @@ export default {
   .user {
     width: 100%;
     height: 100%;
-    // border: 1px solid #000;
     text-align: center;
     position: absolute;
     top: 40%;
@@ -147,6 +148,8 @@ export default {
   width: 100%;
   text-align: left;
   padding-left: 20px;
-  border: 1px solid #333;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ccc;
+  line-height: 40px;
 }
 </style>

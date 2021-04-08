@@ -33,37 +33,6 @@
         </div>
       </div>
     </div>
-    <!-- <div
-      class="content"
-      :style="{
-      width:`${screenWidth * question.length}px`,
-      left:`${-(pageNum * screenWidth)}px`
-    }"
-      @touchstart="touchStart"
-      @touchend="touchEnd"
-    >
-      <div class="question" v-for="(item,index) in question" :key="index">
-        <div class="title">{{item.question.title}}</div>
-        <div class="answerlist">
-          <div class="list-demo">
-            <div class="option">A</div>
-            <div class="answer">{{item.question.answerA}}</div>
-          </div>
-          <div class="list-demo">
-            <div class="option">B</div>
-            <div class="answer">{{item.question.answerB}}</div>
-          </div>
-          <div class="list-demo">
-            <div class="option">C</div>
-            <div class="answer">{{item.question.answerC}}</div>
-          </div>
-          <div class="list-demo">
-            <div class="option">D</div>
-            <div class="answer">{{item.question.answerD}}</div>
-          </div>
-        </div>
-      </div>
-    </div>-->
 
     <footer>
       <!-- <div>
@@ -145,6 +114,7 @@ export default {
     // }
     this.username = this.getCookie('username')
     console.log('created: get username is ' + this.username)
+    
   },
   // 钩子函数
   mounted () {
@@ -159,6 +129,7 @@ export default {
     }
   },
   methods: {
+    // 获取当前用户名
     getCookie (name) {
       console.log('get cookie for cookie name' + name)
       var arr = document.cookie.match(

@@ -29,7 +29,7 @@ export default {
   },
   methods: {
     GoChapter (categoryId) {
-      this.$router.push(`/Reprint/${categoryId}`)
+      this.$router.push(`/ChoiceQuestion/${categoryId}`)
     },
     async getChapter () {
       const res = await this.$http.get('/category')

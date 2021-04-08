@@ -58,6 +58,7 @@ export default {
     register () {
       this.$router.push('/register')
     },
+    // 设置cookie
     setCookie (name, value, expiredays) {
       console.log('set cookie ' + name + ',value ' + value)
       var exdate = new Date()

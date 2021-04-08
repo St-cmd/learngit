@@ -19,6 +19,9 @@ require('./routes/admin/login')(app)
 require('./routes/web/wrongquestion')(app)
 require('./routes/web/category')(app)
 require('./routes/web/choicequestion')(app)
+require('./routes/web/judgedquestion')(app)
+require('./routes/web/multiplechoicequestion')(app)
+require('./routes/web/discussquestion')(app)
 require('./routes/web/userinfo')(app)
 
 // 引入数据库
