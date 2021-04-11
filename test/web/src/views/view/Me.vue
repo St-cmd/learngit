@@ -19,20 +19,16 @@ export default {
       listData: [
         [
           { title: '个人资料' },
-          // { title: 'VIP会员' },
-          { title: '我的错题', border: true }
-          // { title: '我的收藏', border: true }
+          { title: '成绩查询' }
         ],
         [
-          // { title: '切换科目' },
-          { title: '帮助与反馈' }, // TODO wait for complete
           { title: '清理缓存', border: true }, // TODO wait for complete
           { title: '错题清空' }
         ],
         [
-          { title: '成绩查询' },
-          { title: '关于版本' }, // TODO wait for complete
-          { title: '将App，推荐给您的好友吧！', border: true } // TODO wait for complete
+          { title: '帮助与反馈' }, // TODO wait for complete
+          { title: '分享给您的好友吧！', border: true }, // TODO wait for complete
+          { title: '关于备考' } // TODO wait for complete
         ]
       ],
       username: ''
@@ -55,15 +51,10 @@ export default {
       })
     },
     async clickItem (id) {
-      // console.log('click id is ' + id)
+      console.log('click id is ' + id)
       switch (id) {
         case '个人资料': { // TODO
-          break
-        }
-        case '我的错题': { // TODO 添加显示页面
-          console.log('我的错题 ' + this.username)
-          let wrongRes = await this.$http.post('/wrongquestion/list', { 'username': this.username })
-          console.log(wrongRes.data)
+          this.$router.push('/MyInfo')
           break
         }
         case '成绩查询': { // TODO 添加显示页面
@@ -82,10 +73,7 @@ export default {
           console.log(res)
           break
         }
-        case '关于版本': { // TODO
-          break
-        }
-        case '将App，推荐给您的好友吧！': {
+        case '分享给您的好友吧！': {
           let transfer = document.createElement('input')
           document.body.appendChild(transfer)
           transfer.value = window.location.href // 这里表示想要复制的内容
@@ -95,9 +83,18 @@ export default {
             document.execCommand('copy')
           }
           transfer.blur()
-          console.log('复制成功')
-          alert('复制成功')
+          // console.log('复制成功')
+          // alert('复制成功')
+          this.$message({
+            message: '复制成功',
+            center: true
+          });
           document.body.removeChild(transfer)
+          break
+        }
+        case '关于备考': { // TODO
+          this.$router.push('/AboutTest')
+          break
         }
       }
     },

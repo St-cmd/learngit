@@ -16,7 +16,7 @@ module.exports = app => {
     router.get('/', async (req, res) => {
         console.log("hahahawojinlaile");
         const items = await JudgedQuestion.find().limit(10)
-        console.log(items,"hahahawojinlaile");
+        console.log(items, "hahahawojinlaile");
         res.send(items)
     })
 

@@ -17,13 +17,13 @@
 
 <script>
 export default {
-  props: ['title'],
+  props: ["title"],
   methods: {
-    ClickBack () {
-      this.$router.back(-1)
-    }
-  }
-}
+    ClickBack() {
+      this.$router.back(-1);
+    },
+  },
+};
 </script>
 
 <style lang="less" scoped>
@@ -37,8 +37,7 @@ export default {
   align-items: center;
   .left,
   .right {
-    width: 4.6154rem;
-    padding-top:0.8462rem;
+   
   }
   .center {
     flex: 1;

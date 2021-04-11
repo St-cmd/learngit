@@ -1,6 +1,21 @@
 <template>
   <div class="Reprint">
-    <Header title="多选题"></Header>
+    <div class="wrap">
+      <div class="Img"><img src="@/assets/images/Header/back.png" alt @click="ClickBack" /></div>
+      <div class="box">
+        <el-dropdown @command="handleCommand">
+        <span class="el-dropdown-link">
+            {{name}}
+          <i class="el-icon-arrow-down el-icon--right"></i>
+        </span>
+        <el-dropdown-menu slot="dropdown">
+          <el-dropdown-item command="单选题">单选题</el-dropdown-item>
+          <el-dropdown-item command="判断题">判断题</el-dropdown-item>
+          <el-dropdown-item command="论述题">论述题</el-dropdown-item>
+        </el-dropdown-menu>
+      </el-dropdown>
+      </div>
+    </div>
     <div
       class="container"
       :style="{
@@ -28,9 +43,10 @@
               class="option"
               :style="{
                 background:
-                actionData[index] instanceof Array && actionData[index].indexOf(Ai)>=0
+                  actionData[index] instanceof Array &&
+                  actionData[index].indexOf(Ai) >= 0
                     ? 'lightskyblue'
-                    : ''
+                    : '',
               }"
             >
               {{ option[Ai] }}
@@ -38,9 +54,20 @@
             {{ Aitem }}
           </div>
         </div>
-        <div class="answ" v-if="item.flag==true">
-          <span class="user">你的答案：<i  :style="{color:Boolean(question[index].isRight) ? 'rgb(14, 148, 231)':'rgb(248, 69, 45)'}">{{item.userAnswerStr}}</i></span>  
-          <span class="correct">正确答案：<i>{{item.rightStr}}</i></span>
+        <div class="answ" v-if="item.flag == true">
+          <span class="user"
+            >你的答案：<i
+              :style="{
+                color: Boolean(question[index].isRight)
+                  ? 'rgb(14, 148, 231)'
+                  : 'rgb(248, 69, 45)',
+              }"
+              >{{ item.userAnswerStr }}</i
+            ></span
+          >
+          <span class="correct"
+            >正确答案：<i>{{ item.rightStr }}</i></span
+          >
         </div>
       </div>
     </div>
@@ -67,7 +94,6 @@
 </template>
 
 <script>
-import Header from "../../components/Header";
 import { shuffle } from "../../common/utils";
 
 export default {
@@ -76,6 +102,7 @@ export default {
   },
   data() {
     return {
+      name:'多选题',
       actionData: [], // 储存选中选项
       question: [],
       windowHeight: "",
@@ -96,9 +123,6 @@ export default {
       username: "", // 用户名
     };
   },
-  components: {
-    Header,
-  },
   beforeDestroy() {
     if (this.wrongQuestion.length !== 0 || this.correctQuestion !== 0) {
       this.postWrongQuestion();
@@ -118,7 +142,6 @@ export default {
   },
   // 钩子函数
   mounted() {
-    
     const that = this;
     console.log(that);
     window.onresize = () => {
@@ -130,6 +153,27 @@ export default {
     };
   },
   methods: {
+    ClickBack() {
+      this.$router.push('/user')
+    },
+    // 点击切换题目类型
+    handleCommand(command) {
+      // this.name=command
+      console.log(command,'commandcommandcommand');
+      this.nam=command
+      switch (command){
+        case '单选题':
+          this.$router.push('/ChoiceQuestion')
+          break;
+        case '判断题':
+          this.$router.push('/JudgedQuestion')
+          break
+        case '论述题':
+          this.$router.push('/DiscussQuestion')
+          break
+      }
+
+    },
     // 获取当前用户名
     getCookie(name) {
       console.log("get cookie for cookie name" + name);
@@ -150,9 +194,7 @@ export default {
       console.log(e, "touchEnd");
       let end = e.changedTouches[0].pageX;
       // if (this.list[this.pageNum].newType != 'saqs'||)
-      if (
-        this.move.start - end >= 50
-      ) {
+      if (this.move.start - end >= 50) {
         // 在滑动，布尔值变为this.question[this.pageNum].flag=true
         // 用户选择的答案
         // this.actionData[this.pageNum]
@@ -170,22 +212,24 @@ export default {
           let rightAnswer = this.question[this.pageNum].right;
           // 页面显示答案信息
           // 用户答案
-          let userAnswerArr = []
-          if(userAnswer instanceof Array && userAnswer.length>0){
-            userAnswer.sort().forEach((item)=>{
-              userAnswerArr.push(this.option[item])
-            })
-            this.question[this.pageNum].userAnswerStr = userAnswerArr.join(",")
-          }else{
-            this.question[this.pageNum].userAnswerStr = '未作答'
+          let userAnswerArr = [];
+          if (userAnswer instanceof Array && userAnswer.length > 0) {
+            userAnswer.sort().forEach((item) => {
+              userAnswerArr.push(this.option[item]);
+            });
+            this.question[this.pageNum].userAnswerStr = userAnswerArr.join(",");
+          } else {
+            this.question[this.pageNum].userAnswerStr = "未作答";
           }
-          
-          // 标准答案
-          this.question[this.pageNum].rightStr = rightAnswer.sort().join(",")
 
+          // 标准答案
+          this.question[this.pageNum].rightStr = rightAnswer.sort().join(",");
           this.question[this.pageNum].flag = true;
 
-          if (userAnswer instanceof Array && userAnswer.length == rightAnswer.length) {
+          if (
+            userAnswer instanceof Array &&
+            userAnswer.length == rightAnswer.length
+          ) {
             // 长度一致，比对内容
             let isWrong = false;
             userAnswer.forEach((item) => {
@@ -196,68 +240,67 @@ export default {
             });
             if (isWrong) {
               // TODO 判断是在wrongQuestion中，不在则记录到答错题列表 wrongQuestion
-              this.collectWrongQuestion(this.pageNum)
+              this.collectWrongQuestion(this.pageNum);
             } else {
               // TODO 答案正确，判断是否记录到
-              this.collectCorrectQuestion(this.pageNum)
-              if(this.pageNum + 1 < this.question.length){
+              this.collectCorrectQuestion(this.pageNum);
+              if (this.pageNum + 1 < this.question.length) {
                 this.pageNum += 1;
-              }else{
-                 this.$message({
-                  message: '没有更多题了哦~~',
-                  type: 'info'
+              } else {
+                this.$message({
+                  message: "没有更多题了哦~~",
+                  type: "info",
                 });
               }
             }
           } else {
             // TODO 记录到答错题列表 wrongQuestion
-            this.collectWrongQuestion(this.pageNum)
+            this.collectWrongQuestion(this.pageNum);
           }
         } else {
           // 做过
-          if(this.pageNum + 1 < this.question.length){
-              this.pageNum += 1;
-          }else{
-             this.$message({
-                message: '没有更多题了哦~~',
-                type: 'info'
-              });
+          if (this.pageNum + 1 < this.question.length) {
+            this.pageNum += 1;
+          } else {
+            this.$message({
+              message: "没有更多题了哦~~",
+              type: "info",
+            });
           }
         }
       }
       if (this.move.start - end <= -50) {
-        if(this.pageNum !== 0){
+        if (this.pageNum !== 0) {
           this.pageNum -= 1;
-        }else{
-            this.$message({
-            message: '已经到第一题了哦~~',
-            type: 'info'
+        } else {
+          this.$message({
+            message: "已经到第一题了哦~~",
+            type: "info",
           });
         }
       }
     },
-    // 标记题目对错
+    // 将用户所选题目存储
     action(index, Ai) {
       // console.log(index, Ai) // index--第几道题 Ai--循环的第几个选项
       // console.log(this.question[index])
       // 点击的时候将点击的选项记录下来
-      if(!this.question[index].flag){
-          if (!(this.actionData[index] instanceof Array)) {
-              this.actionData[index] = [];
-          }
-          let userAnwser = this.actionData[index];
-          let i = userAnwser.indexOf(Ai);
-          if (i >= 0) {
-            // 存在，则为取消勾选， 移除响应答案
-            userAnwser.splice(i,1);
-          } else {
-              // 不存在，存储用户答案
-              userAnwser.push(Ai);
-          }
-          console.log(this.actionData[index].join(","),"hiahiahia");
-          this.$set(this.actionData, index, userAnwser);
+      if (!this.question[index].flag) {
+        if (!(this.actionData[index] instanceof Array)) {
+          this.actionData[index] = [];
         }
-      },
+        let userAnwser = this.actionData[index];
+        let i = userAnwser.indexOf(Ai);
+        if (i >= 0) {
+          // 存在，则为取消勾选， 移除响应答案
+          userAnwser.splice(i, 1);
+        } else {
+          // 不存在，存储用户答案
+          userAnwser.push(Ai);
+        }
+        this.$set(this.actionData, index, userAnwser);
+      }
+    },
     // 获取题目
     async getQuestion() {
       // 如果有id,则按照分类id取
@@ -315,7 +358,7 @@ export default {
           let category = item.category;
           // 定义一个变量，flag=false，在获取当前题目时在数组选项组中添加一个标识设置为false
           let flag = false;
-          let isRight=false;
+          let isRight = false;
           // 将正确答案的ABCD转化为0123
           switch (right) {
             case "A":
@@ -331,7 +374,15 @@ export default {
               right = 3;
               break;
           }
-          let qObj = { title, answerList, rate, right, category, flag, isRight};
+          let qObj = {
+            title,
+            answerList,
+            rate,
+            right,
+            category,
+            flag,
+            isRight,
+          };
           console.log(qObj);
           this.question.push(qObj);
         });
@@ -365,7 +416,7 @@ export default {
           let right = item.rightAnswer;
           let category = item.category;
           let flag = false;
-          let isRight=false;
+          let isRight = false;
           // 将正确答案的ABCD转化为0123
           switch (right) {
             case "A":
@@ -381,7 +432,15 @@ export default {
               right = 3;
               break;
           }
-          let qObj = { title, answerList, rate, right, category, flag,isRight };
+          let qObj = {
+            title,
+            answerList,
+            rate,
+            right,
+            category,
+            flag,
+            isRight,
+          };
           console.log(qObj);
           this.question.push(qObj);
         });
@@ -396,15 +455,15 @@ export default {
       // console.log(this.question)
     },
     // 存储错误题目
-    collectWrongQuestion(index){
+    collectWrongQuestion(index) {
       this.Wrong += 1;
       let temp = this.question[index];
       temp.username = this.username;
       this.wrongQuestion.push(temp);
     },
     // 存储正确题目
-    collectCorrectQuestion(index){
-      this.question[index].isRight=true
+    collectCorrectQuestion(index) {
+      this.question[index].isRight = true;
       this.Correct++;
       let temp = this.question[index];
       temp.username = this.username;
@@ -443,8 +502,8 @@ export default {
             let rate = item.rate;
             let right = item.rightAnswer;
             let category = item.category;
-            let flag = false;
-            let isRight=false;
+            let flag = false; //判断是否做过此题
+            let isRight = false; //判断用户所选答案是否正确
             // 将正确答案的ABCD转化为0123
             switch (right) {
               case "A":
@@ -460,7 +519,15 @@ export default {
                 right = 3;
                 break;
             }
-            let qObj = { title, answerList, rate, right, category, flag,isRight};
+            let qObj = {
+              title,
+              answerList,
+              rate,
+              right,
+              category,
+              flag,
+              isRight,
+            };
             console.log(qObj);
             this.question.push(qObj);
           });
@@ -483,7 +550,7 @@ export default {
             let right = item.rightAnswer;
             let category = item.category;
             let flag = false;
-            let isRight=false;
+            let isRight = false;
             // 将正确答案的ABCD转化为0123
             switch (right) {
               case "A":
@@ -499,7 +566,15 @@ export default {
                 right = 3;
                 break;
             }
-            let qObj = { title, answerList, rate, right, category, flag,isRight };
+            let qObj = {
+              title,
+              answerList,
+              rate,
+              right,
+              category,
+              flag,
+              isRight,
+            };
             console.log(qObj);
             this.question.push(qObj);
           });
@@ -522,7 +597,7 @@ export default {
             let right = item.rightAnswer;
             let category = item.category;
             let flag = false;
-            let isRight=false;
+            let isRight = false;
             // 将正确答案的ABCD转化为0123
             switch (right) {
               case "A":
@@ -538,7 +613,15 @@ export default {
                 right = 3;
                 break;
             }
-            let qObj = { title, answerList, rate, right, category, flag,isRight };
+            let qObj = {
+              title,
+              answerList,
+              rate,
+              right,
+              category,
+              flag,
+              isRight,
+            };
             console.log(qObj);
             this.question.push(qObj);
           });
@@ -551,6 +634,34 @@ export default {
 
 <style lang="less" scoped>
 .Reprint {
+   .wrap{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    .Img{
+        width: 24px;
+        height: 24px;
+        img{
+          width: 24px;
+          height: 24px;
+        }
+    }
+    .box{
+      flex: 1;
+        text-align: center;
+        .el-dropdown-link {
+          font-size: 20px;
+          cursor: pointer;
+          color: #409eff;
+          display: flex;
+        }
+        .el-icon-arrow-down {
+          font-size: 20px;
+          margin-top: 6px;
+        }
+    }
+    
+  }
   .content {
     position: fixed;
     overflow-y: auto;
@@ -585,7 +696,6 @@ export default {
           .answer {
             padding-left: 15px;
             font-size: 18px;
-
           }
         }
       }
@@ -632,32 +742,32 @@ export default {
 
         // }
       }
-      .answ{
+      .answ {
         font-size: 18px;
         font-weight: bold;
-        
+
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        .user{
+        .user {
           display: inline-block;
           margin-bottom: 10px;
-         i{
-           font-style: normal;
-          //  color: rgb(248, 69, 45);
-         }
-        //  .blue{
-        //    color: rgb(14, 148, 231);
-        //  }
-        //  .orange{
-        //    color: rgb(248, 69, 45);
-        //  }
+          i {
+            font-style: normal;
+            //  color: rgb(248, 69, 45);
+          }
+          //  .blue{
+          //    color: rgb(14, 148, 231);
+          //  }
+          //  .orange{
+          //    color: rgb(248, 69, 45);
+          //  }
         }
-        .correct{
-           i{
-             font-style: normal;
-             color: rgb(14, 148, 231);
-           }
+        .correct {
+          i {
+            font-style: normal;
+            color: rgb(14, 148, 231);
+          }
         }
       }
     }

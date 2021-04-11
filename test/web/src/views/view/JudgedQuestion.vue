@@ -1,6 +1,21 @@
 <template>
   <div class="Reprint">
-    <Header title="判断题"></Header>
+   <div class="wrap">
+      <div class="Img"><img src="@/assets/images/Header/back.png" alt @click="ClickBack" /></div>
+      <div class="box">
+        <el-dropdown @command="handleCommand">
+        <span class="el-dropdown-link">
+            {{name}}
+          <i class="el-icon-arrow-down el-icon--right"></i>
+        </span>
+        <el-dropdown-menu slot="dropdown">
+          <el-dropdown-item command="单选题">单选题</el-dropdown-item>
+          <el-dropdown-item command="判断题">判断题</el-dropdown-item>
+          <el-dropdown-item command="论述题">论述题</el-dropdown-item>
+        </el-dropdown-menu>
+      </el-dropdown>
+      </div>
+    </div>
     <div
       class="container"
       :style="{
@@ -65,7 +80,6 @@
 </template>
 
 <script>
-import Header from "../../components/Header";
 // 引入乱序数组
 import { shuffle } from "../../common/utils";
 
@@ -75,6 +89,7 @@ export default {
   },
   data() {
     return {
+      name:'判断题',
       actionData: [], // 储存选中选项
       question: [],
       windowHeight: "",
@@ -94,9 +109,6 @@ export default {
       wrongdataArr: [],
       username: "", // 用户名
     };
-  },
-  components: {
-    Header,
   },
   beforeDestroy() {
     if (this.wrongQuestion.length !== 0 || this.correctQuestion !== 0) {
@@ -138,6 +150,28 @@ export default {
     };
   },
   methods: {
+     // 返回
+    ClickBack() {
+      this.$router.push('/user')
+    },
+    // 点击切换题目类型
+    handleCommand(command) {
+      // this.name=command
+      console.log(command,'commandcommandcommand');
+      this.nam=command
+      switch (command){
+        case '单选题':
+          this.$router.push('/ChoiceQuestion')
+          break;
+        case '判断题':
+          this.$router.push('/JudgedQuestion')
+          break
+        case '论述题':
+          this.$router.push('/DiscussQuestion')
+          break
+      }
+
+    },
     // 获取当前用户名
     getCookie(name) {
       console.log("get cookie for cookie name" + name);
@@ -157,14 +191,25 @@ export default {
     touchEnd(e) {
       let end = e.changedTouches[0].pageX;
       // if (this.list[this.pageNum].newType != 'saqs'||)
-      if (
-        this.move.start - end >= 50 &&
-        this.pageNum + 1 < this.question.length
-      ) {
-        this.pageNum += 1;
+      if (this.move.start - end >= 50) {
+        if(this.pageNum + 1 < this.question.length){
+            this.pageNum += 1;
+        }else{
+            this.$message({
+            message: '没有更多题了哦~~',
+            type: 'info'
+            });
+        }
       }
-      if (this.move.start - end <= -50 && this.pageNum !== 0) {
-        this.pageNum -= 1;
+      if (this.move.start - end <= -50) {
+        if(this.pageNum !== 0){
+          this.pageNum -= 1;
+        }else{
+            this.$message({
+            message: '已经到第一题了哦~~',
+            type: 'info'
+          });
+        }
       }
     },
     // 标记题目对错
@@ -310,9 +355,7 @@ export default {
         res = await this.$http.get(`/wrongquestion/${this.$route.params.wid}`);
       } else {
         // 直接获取判断题
-        console.log("直接获取判断题-start");
         res = await this.$http.get("/judgedQuestion");
-        console.log(res.data, "直接获取判断题-end");
         let random = res.data;
         let randomArr = shuffle(random);
         // console.log(randomArr)
@@ -455,6 +498,34 @@ export default {
 
 <style lang="less" scoped>
 .Reprint {
+    .wrap{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    .Img{
+        width: 24px;
+        height: 24px;
+        img{
+          width: 24px;
+          height: 24px;
+        }
+    }
+    .box{
+      flex: 1;
+        text-align: center;
+        .el-dropdown-link {
+          font-size: 20px;
+          cursor: pointer;
+          color: #409eff;
+          display: flex;
+        }
+        .el-icon-arrow-down {
+          font-size: 20px;
+          margin-top: 6px;
+        }
+    }
+    
+  }
   .content {
     position: fixed;
     overflow-y: auto;

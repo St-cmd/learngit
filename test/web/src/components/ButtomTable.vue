@@ -42,6 +42,7 @@ export default {
   border-top: 1px solid #b9b9b9;
   position: fixed;
   bottom: 0;
+  left: 0;
   width: 100vw;
   .list {
     width:50%;
