@@ -24,10 +24,6 @@
     <div>
     <button class="btn btn-com" @click="register">注册</button>
     </div>
-    <!-- 弹出层 -->
-    <!-- <div v-show="isShow" class="layer">
-      <p>发送成功</p>
-    </div>-->
   </div>
 </template>
 

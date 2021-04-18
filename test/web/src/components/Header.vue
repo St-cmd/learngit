@@ -35,10 +35,6 @@ export default {
   line-height: 60px;
   text-align: center;
   align-items: center;
-  .left,
-  .right {
-   
-  }
   .center {
     flex: 1;
   }

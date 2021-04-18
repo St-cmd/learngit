@@ -14,6 +14,7 @@ import Chapter from '../views/view/Chapter.vue'
 import Recomand from '../views/view/same/Recomand.vue'
 import AboutTest from '../views/view/my/AboutTest.vue'
 import MyInfo from '../views/view/my/MyInfo.vue'
+import Help from '../views/view/my/Help.vue'
 
 Vue.use(VueRouter)
 
@@ -59,7 +60,7 @@ const routes = [
   },
   {
     // 错题
-    path: '/ChoiceQuestion/:wid',
+    path: '/ChoiceQuestion/Wrong/:wid',
     name: 'ChoiceQuestion',
     component: ChoiceQuestion,
     props: true
@@ -180,11 +181,35 @@ const routes = [
     path:'/MyInfo',
     name:'MyInfo',
     component:MyInfo
+  },
+  {
+    path:'/Help',
+    name:'Help',
+    component:Help
   }
 ]
 
 const router = new VueRouter({
   routes
+})
+
+// 全局守卫
+router.beforeEach((to,from,next)=>{
+  if(to.path=='/login'){
+    next()
+    return
+  }
+  // 必须登录之后在进行操作
+  let arr = document.cookie.match(new RegExp('(^| )username=([^;]*)(;|$)'))
+  let userInfo = undefined
+  if (arr != null) {
+    userInfo = unescape(arr[2])
+  }
+  if(userInfo){
+    next()
+    return
+  }
+  next('/login')
 })
 
 export default router

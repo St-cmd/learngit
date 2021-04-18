@@ -572,7 +572,7 @@ export default {
     overflow-y: auto;
     overflow-x: hidden;
     transition: left 0.5s;
-    background-color: #f1f0f5;
+    background-color: #fff;
     height: 100vh;
     .box {
       background: #fff;

@@ -221,16 +221,6 @@ export default {
       let Ar = this.question[index].right;
       // 点击时，将正确选项存到题目属性中
       this.question[index].answer = Ar;
-      console.log(
-        "ai is " +
-          Ai.toString() +
-          "type is " +
-          typeof Ai +
-          ", ar is " +
-          Ar +
-          "type is " +
-          typeof Ar
-      );
       if (Ai.toString() === Ar.toString()) {
         console.log("答案正确");
         let result = this.wrongQuestion.indexOf(this.question[index]);
@@ -292,7 +282,7 @@ export default {
     async getQuestion() {
       // 如果有id,则按照分类id取
       let res;
-      // 同类推荐
+      // 分类练习
       if (this.$route.params.id && typeof this.$route.params.id === "string") {
         /**
          * 获取前置分类题目数据
@@ -364,12 +354,12 @@ export default {
         // 错题
         res = await this.$http.get(`/wrongquestion/${this.$route.params.wid}`);
       } else {
+        // 随机练习
         // 直接获取选择题
         res = await this.$http.get("/choiceQuestion");
-        // console.log(res.data)
         let random = res.data;
+        // 将获取到的题目数组进行随机
         let randomArr = shuffle(random);
-        // console.log(randomArr)
         // 形成题目数组
         let arr = [];
         randomArr.forEach((item) => {
@@ -409,14 +399,6 @@ export default {
           this.question.push(qObj);
         });
       }
-      // console.log(res.data)
-      // this.question = res.data.question
-      // 整理答案数组
-      // const questionList = []
-
-      // 随机练习-将数组乱序
-      // this.question = shuffle(this.question)
-      // console.log(this.question)
     },
     // 保存错题到服务器
     async postWrongQuestion() {
@@ -628,7 +610,7 @@ export default {
     overflow-y: auto;
     overflow-x: hidden;
     transition: left 0.5s;
-    background-color: #f1f0f5;
+    background-color: #fff;
     height: 100vh;
     .box {
       background: #fff;

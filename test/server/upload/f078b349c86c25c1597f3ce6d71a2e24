@@ -1,0 +1,49 @@
+显示数据库
+show dbs;
+使用数据库
+use 数据库名
+显示表格
+show tables
+
+
+
+
+ use testproject
+switched to db testproject
+> db.admininfos.find();
+{ "_id" : ObjectId("603663c6c46a12376cf39fdb"), "username" : "admin", "password" : "$2a$10$Z2SMT6ABWJU3EZkMWAtup.HFCYx0DgfC5HK6WIXCfbLmfCM4Qg.s2", "__v" : 0 }
+> show dbs
+admin        0.000GB
+config       0.000GB
+local        0.000GB
+testproject  0.000GB
+> show tables
+admininfos
+categories
+choicequestions
+userinfos
+wrongquestions
+> db.categories
+testproject.categories
+> db.categories.find()
+{ "_id" : ObjectId("6011856874161140148b99cb"), "name" : "22", "__v" : 0 }
+{ "_id" : ObjectId("6011867274161140148b99cc"), "name" : "11", "__v" : 0 }
+{ "_id" : ObjectId("60366436c46a12376cf39fdc"), "name" : "test", "__v" : 0 }
+> db.choicequestions.find()
+{ "_id" : ObjectId("6011868f74161140148b99cd"), "question" : { "category" : { "categoryName" : "11", "categoryId" : "6011867274161140148b99cc" }, "rate" : 5, "title" : "2", "answerA" : "1", "answerB" : "2", "answerC" : "3", "answerD" : "4", "rightAnswer" : "2" }, "__v" : 0 }
+{ "_id" : ObjectId("6011889a74161140148b99cf"), "question" : { "category" : { "categoryName" : "" }, "rate" : 5, "answerA" : "11", "answerB" : "11", "answerC" : "22", "answerD" : "33", "title" : "1", "rightAnswer" : "22" }, "__v" : 0 }
+{ "_id" : ObjectId("6036636eb2587c3584cf7641"), "question" : { "category" : { "categoryName" : "22", "categoryId" : "6011856874161140148b99cb" }, "rate" : 2, "title" : "今年多大", "answerA" : "11", "answerB" : "22", "answerC" : "33", "answerD" : "44", "rightAnswer" : "B" }, "__v" : 0 }
+{ "_id" : ObjectId("60366477c46a12376cf39fdd"), "question" : { "category" : { "categoryName" : "test", "categoryId" : "60366436c46a12376cf39fdc" }, "rate" : 3, "title" : "河北省的省会？", "answerA" : "云南", "answerB" : "石家庄", "answerC" : "太原", "answerD" : "北京", "rightAnswer" : "B" }, "__v" : 0 }
+> db.userinfos.find()
+{ "_id" : ObjectId("6011886e74161140148b99ce"), "username" : "无名氏", "password" : "123", "__v" : 0 }
+{ "_id" : ObjectId("60366583c46a12376cf39fde"), "username" : "11", "password" : "$2a$10$bBGx0786B.ynyGRhSVs8Y.qp4/VQH93APfzakXdOOPXrCiPsnsJnK", "__v" : 0 }
+{ "_id" : ObjectId("603665a2c46a12376cf39fdf"), "username" : "22", "password" : "$2a$10$CayHc2z8Un3SKmc6LG/ueuzKenneLxDDzR.LZnp6jiZcriAA4alqq", "__v" : 0 }
+{ "_id" : ObjectId("60366677c46a12376cf39fe0"), "username" : "ww", "password" : "$2a$10$YBrOQm7eOAJJfBP4up0aEeiQl3snreJInv6yCucTXsBQevZ80DEgS", "__v" : 0 }
+> db.wrongquestions.find()
+{ "_id" : ObjectId("601188bb74161140148b99d0"), "answerList" : [ "1", "2", "3", "4" ], "title" : "2", "rate" : 5, "right" : 2, "category" : { "categoryName" : "11", "categoryId" : "6011867274161140148b99cc" }, "__v" : 0 }
+{ "_id" : ObjectId("601188bb74161140148b99d1"), "answerList" : [ "11", "11", "22", "33" ], "title" : "1", "rate" : 5, "right" : 22, "category" : { "categoryName" : "" }, "__v" : 0 }
+{ "_id" : ObjectId("601188cb74161140148b99d2"), "answerList" : [ "11", "11", "22", "33" ], "title" : "1", "rate" : 5, "right" : 22, "category" : { "categoryName" : "" }, "__v" : 0 }
+{ "_id" : ObjectId("603666b8c46a12376cf39fe2"), "answerList" : [ "11", "11", "22", "33" ], "title" : "1", "rate" : 5, "right" : 22, "category" : { "categoryName" : "" }, "username" : "ww", "__v" : 0 }
+{ "_id" : ObjectId("60367134c46a12376cf39fe5"), "answerList" : [ "1", "2", "3", "4" ], "title" : "2", "rate" : 5, "right" : 2, "category" : { "categoryName" : "11", "categoryId" : "6011867274161140148b99cc" }, "username" : "ww", "__v" : 0 }
+{ "_id" : ObjectId("603672bec46a12376cf39fe7"), "answerList" : [ "云南", "石家庄", "太原", "北京" ], "title" : "河北省的省会？", "rate" : 3, "right" : 1, "category" : { "categoryName" : "test", "categoryId" : "60366436c46a12376cf39fdc" }, "username" : "ww", "__v" : 0 }
+>

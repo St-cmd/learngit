@@ -1,7 +1,7 @@
 <template>
     <div>
         <Header title="关于备考"></Header>
-        <div>备考</div>
+        <div></div>
     </div>
     
 </template>

@@ -11,7 +11,7 @@ module.exports = app => {
         //     console.log({...item})
         //     return {'question': {...item}}
         // })
-        // 把做对的题目从数据库中删除
+        // 把做对的题目从数据库错误题目表中删除
         console.log('correctQuestion' + req.body.correctQuestion)
         for (let i = 0; i < req.body.correctQuestion.length; i++) {
             let items = req.body.correctQuestion[i]

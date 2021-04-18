@@ -53,7 +53,6 @@ export default {
         // })
         this.showErrorMsg = true
         this.errorMessage = '用户名或者密码错误'
-        console.log('用户名或者密码错误')
       }
     },
     setCookie (name, value, expiredays) {

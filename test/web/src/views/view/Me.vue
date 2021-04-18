@@ -66,6 +66,7 @@ export default {
           break
         }
         case '帮助与反馈': { // TODO
+          this.$router.push('/Help')
           break
         }
         case '错题清空': {

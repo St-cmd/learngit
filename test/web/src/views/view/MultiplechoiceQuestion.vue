@@ -196,15 +196,12 @@ export default {
       // if (this.list[this.pageNum].newType != 'saqs'||)
       if (this.move.start - end >= 50) {
         // 在滑动，布尔值变为this.question[this.pageNum].flag=true
-        // 用户选择的答案
-        // this.actionData[this.pageNum]
-        // 标准答案
-        // this.question[this.pageNum].right
+        // 用户选择的答案this.actionData[this.pageNum]
+        // 标准答案 this.question[this.pageNum].right
         // 比对逻辑：先判断答案长度是否一致，不一致则为错误，提示用户(显示用户所选答案和标准答案)并阻止翻页this.pageNum值不变
         // 若为一致，则比较内容是否一致，遍历用户选择的答案是否都在 标准答案中存在indexOf
         // 只要有一个不存在，则判定为错误，提示用户(显示用户所选答案和标准答案)并阻止翻页
         // 都存在则 显示用户所选答案和标准答案;this.pageNum += 1
-
         if (this.question[this.pageNum].flag == false) {
           // 用户选择的答案
           let userAnswer = this.actionData[this.pageNum];
@@ -239,10 +236,10 @@ export default {
               }
             });
             if (isWrong) {
-              // TODO 判断是在wrongQuestion中，不在则记录到答错题列表 wrongQuestion
+              //判断是在wrongQuestion中，不在则记录到答错题列表 wrongQuestion
               this.collectWrongQuestion(this.pageNum);
             } else {
-              // TODO 答案正确，判断是否记录到
+              // 答案正确，判断是否记录到
               this.collectCorrectQuestion(this.pageNum);
               if (this.pageNum + 1 < this.question.length) {
                 this.pageNum += 1;
@@ -254,7 +251,7 @@ export default {
               }
             }
           } else {
-            // TODO 记录到答错题列表 wrongQuestion
+            //记录到答错题列表 wrongQuestion
             this.collectWrongQuestion(this.pageNum);
           }
         } else {

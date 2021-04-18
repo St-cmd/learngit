@@ -22,7 +22,7 @@
       </div>
       <div class="same" @click="GoSame(8)">
         <img src="@/assets/images/Exercise/More.png" alt />
-        同类推荐
+        我的错题
       </div>
     </nav>
   </div>

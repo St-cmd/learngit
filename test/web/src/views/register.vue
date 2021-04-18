@@ -22,6 +22,9 @@
           v-model="confirm"
         />
       </div>
+      <div>
+        
+      </div>
     </div>
     <button class="btn btn-com" @click="register">注册</button>
     <!-- 弹出层 -->

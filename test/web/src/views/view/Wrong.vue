@@ -12,42 +12,9 @@
           <img src="@/assets/images/Wrong/pen.png" alt />
         </div>
         <div class="bar"></div>
-        <!-- <div class="rate">
-          <p>
-            已做:
-            <span>0</span> 总数:
-            <span>150</span>
-          </p>
-          <p>正确率0%</p>
-        </div>-->
+
       </div>
     </div>
-    <!-- 易错率特高 -->
-    <!-- <div class="item clear" @click="clickHighTwo">
-      <div class="left">
-        <img src="@/assets/images/Wrong/middle.png" alt />
-      </div>
-      <div class="content">
-        <div class="title">
-          <h3>易错率特高</h3>
-          <img src="@/assets/images/Wrong/pen.png" alt />
-        </div>
-        <div class="bar"></div>
-      </div>
-    </div>-->
-    <!-- 易错率极高 -->
-    <!-- <div class="item clear" @click="clickHighThree">
-      <div class="left">
-        <img src="@/assets/images/Wrong/high.png" alt />
-      </div>
-      <div class="content">
-        <div class="title">
-          <h3>易错率极高</h3>
-          <img src="@/assets/images/Wrong/pen.png" alt />
-        </div>
-        <div class="bar"></div>
-      </div>
-    </div>-->
   </div>
 </template>
 
@@ -73,9 +40,6 @@ export default {
     clickItem (id) {
       console.log(id)
       this.$router.push(`/ChoiceQuestion/${id}`)
-    },
-    clickWrong () {
-      this.$router.push('/ChoiceQuestion')
     }
   },
   components: {
